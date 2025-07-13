@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Welcome – Charlotte Everley Bronze Plan</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const isValid = urlParams.get('checkout') === 'valid';
+    if (!isValid) {
+      window.location.href = 'https://charlotteeverley.foundral.tech';
+    }
+  </script>
+</head>
+<body class="bg-white text-gray-800 font-serif">
+  <div class="max-w-4xl mx-auto px-6 py-16 flex flex-col md:flex-row items-center">
+    <!-- Left: Image -->
+    <div class="w-40 md:w-48 mb-8 md:mb-0 md:mr-10 flex-shrink-0">
+      <img src="assets/logo-ce.png" alt="Charlotte Everley" class="rounded-full shadow w-full h-auto object-contain">
+    </div>
+
+    <!-- Right: Content -->
+    <div class="flex-1 text-center md:text-left">
+      <h1 class="text-3xl font-bold text-gray-900">Welcome to the Bronze Plan</h1>
+      <p class="mt-4 text-lg text-gray-700">
+        You now have access to <strong>3 prompts per month</strong>, seasonal tone alignment, and light editorial guidance.
+      </p>
+      <p class="mt-6 text-gray-500">
+        Expect your onboarding email shortly. Until then, feel free to email:<br />
+        <a href="mailto:charlotteeverley@charlotteeverley.previewhub-dev.com"
+           class="text-blue-700 hover:underline">
+          charlotteeverley@charlotteeverley.previewhub-dev.com
+        </a>
+      </p>
+
+      <div class="mt-8">
+        <a href="https://buy.stripe.com/YOUR-BRONZE-LINK"
+           class="text-sm text-blue-700 underline">
+          View your Stripe subscription
+        </a>
+      </div>
+
+      <p class="mt-10 text-sm text-gray-400">
+        Thank you for joining Charlotte’s slow and intentional storytelling journey.
+      </p>
+    </div>
+  </div>
+</body>
+</html>
+
+
