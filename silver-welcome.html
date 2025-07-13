@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Welcome – Charlotte Everley Silver Plan</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+<script>
+  const urlParams = new URLSearchParams(window.location.search);
+  const isValid = urlParams.get('checkout') === 'valid';
+
+  if (!isValid) {
+    window.location.href = 'https://charlotteeverley.foundral.tech';
+  }
+</script>
+
+</head>
+<body class="bg-white text-gray-800 font-serif">
+  <div class="max-w-xl mx-auto px-6 py-20 text-center">
+    <h1 class="text-3xl font-bold text-gray-900">Welcome to the Silver Plan</h1>
+    <p class="mt-4 text-lg text-gray-600">
+      You’ve joined a refined circle. Your custom prompts, seasonal updates, and content requests are now in motion.
+    </p>
+    <p class="mt-6 text-gray-500">
+      You’ll receive an onboarding email within 24 hours. In the meantime, feel free to reply to<br />
+      <a href="mailto:hello@charlotteeverley.com" class="text-blue-700 hover:underline">hello@charlotteeverley.com</a> with your goals, listings, or neighborhoods of focus.
+    </p>
+    <p class="mt-10 text-sm text-gray-400">Your stories deserve elegance. Thank you for trusting Charlotte.</p>
+  </div>
+</body>
+</html>
+
+

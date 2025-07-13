@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Welcome – Charlotte Everley Premier Quarterly</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+<script>
+  const urlParams = new URLSearchParams(window.location.search);
+  const isValid = urlParams.get('checkout') === 'valid';
+
+  if (!isValid) {
+    window.location.href = 'https://charlotteeverley.foundral.tech';
+  }
+</script>
+
+</head>
+<body class="bg-white text-gray-800 font-serif">
+  <div class="max-w-xl mx-auto px-6 py-20 text-center">
+    <h1 class="text-3xl font-bold text-gray-900">Welcome to Premier Quarterly</h1>
+    <p class="mt-4 text-lg text-gray-600">
+      You’ve unlocked Charlotte Everley’s full editorial rhythm — unlimited requests, seasonal refinements, and priority turnarounds.
+    </p>
+    <p class="mt-6 text-gray-500">
+      Within the next 24 hours, you’ll receive a personal onboarding message. It will include:
+    </p>
+    <ul class="mt-4 text-left list-disc list-inside text-gray-600">
+      <li>Your dedicated content intake form</li>
+      <li>Quarterly calendar for seasonal refreshes</li>
+      <li>Private access to Charlotte’s tone library</li>
+    </ul>
+    <p class="mt-8 text-gray-500">
+      Until then, feel free to email <a href="mailto:hello@charlotteeverley.com" class="text-blue-700 hover:underline">hello@charlotteeverley.com</a> with any specific listings or narratives you'd like to begin shaping.
+    </p>
+    <p class="mt-10 text-sm text-gray-400">
+      You’ve joined a slower, more intentional way of creating. Welcome to the Premier experience.
+    </p>
+  </div>
+</body>
+</html>
+
+
