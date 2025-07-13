@@ -15,6 +15,16 @@ See: [`index.html`](https://cevherdogan.github.io/charlotte-everley-free/)
 
 ---
 
+## 🧪 Trial Access
+Start with a 7-day free trial for the Silver Plan (no card charged unless continued):
+
+👉 [Start Free Trial](https://buy.stripe.com/your-trial-link)
+
+After checkout, you'll be redirected to:
+[trial-welcome.html](https://cevherdogan.github.io/charlotte-everley-free/trial-welcome.html?checkout=valid)
+
+---
+
 ## 🔐 Notes
 
 - Custom domain managed via `.github/CNAME`
