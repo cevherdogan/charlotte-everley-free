@@ -15,6 +15,12 @@ See: [`index.html`](https://cevherdogan.github.io/charlotte-everley-free/)
 
 ---
 
+## Release Notes
+
+- [v0.3.5](https://github.com/cevherdogan/charlotte-everley-free/releases/tag/v0.3.5)
+
+
+
 ## 🧪 Trial Access
 Start with a 7-day free trial for the Silver Plan (no card charged unless continued):
 
