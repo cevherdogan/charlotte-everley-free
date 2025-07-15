@@ -3,6 +3,13 @@
 Public landing site for Charlotte Everley – Main Line Home & Lifestyle Curator.  
 Live at: https://cevherdogan.github.io/charlotte-everley-free/
 
+## 📘 Empowered Seller Membership Model
+
+- Supporting Sellers & Seller’s Agents Alike
+
+This program welcomes both independent homeowners and those represented by agents. Whether you’re listing solo or with support, our platform enhances visibility, storytelling, and buyer engagement through curated content, listing automation, and community alignment.
+
+
 ---
 
 ## 🛒 Offerings Summary
@@ -78,17 +85,21 @@ Top-tier plan with unlimited prompts, seasonal scheduling, and full editorial se
 
 ### Featured Infographic
 
-[Explore the Devon Home Infographic](./articles/devon-home.html)
-[Explore](https://charlotteeverley.foundral.tech/articles/devon-home.html)
-[Explore Devon Home](https://charlotteeverley.foundral.tech/devon-home.html)
+
+- [Explore the Devon Home Infographic](https://charlotteeverley.foundral.tech/articles/devon-home.html)
+- [Explore the Cultural Footprint Map](https://charlotteeverley.foundral.tech/assets/cultural-map.svg)
+
+
+## Thank You!
 
 With heartfelt thanks to **Charlotte Everley**—whose voice, insight, and region-rooted intelligence brought clarity and warmth to every word and visual in this project.
 
 ## 🗺️ Articles
 
-All neighborhood features are organized in the [`articles/`](./articles) directory.  
-With its own [organizational doc guide](./articles/README.md) 
-Start with [Berwyn](./articles/berwyn.md) — a portrait in quiet charm.
+- [Charlotte Everley Articles Catalog](articles/Charlotte-Everley-Articles-Catalog.md)
+- All neighborhood features are organized in the [`articles/`](./articles) directory.  
+- With its own [organizational doc guide](./articles/README.md) 
+- Start with [Berwyn](./articles/berwyn.md) — a portrait in quiet charm.
 
 ## ✍️ Curated Stories
 
