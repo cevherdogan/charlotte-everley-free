@@ -1,0 +1,63 @@
+import Head from "next/head";
+import { Card, CardContent } from "@/components/ui/card";
+import { Landmark, Leaf, Home, Palette, Horse } from "lucide-react";
+
+export default function DevonCommunityPage() {
+  return (
+    <div className="min-h-screen bg-neutral-50 p-6 md:p-12">
+      <Head>
+        <title>Devon Lifestyle Feature | Main Line Living</title>
+        <meta
+          name="description"
+          content="A portrait of Devon, where elegance meets equestrian heritage. Discover quiet streets, legacy homes, and refined community rhythms."
+        />
+        <meta property="og:image" content="/images/devon-og.jpg" />
+      </Head>
+
+      <div className="max-w-4xl mx-auto space-y-8">
+        <h1 className="text-4xl font-bold text-center text-emerald-900">Devon: Tradition with a Quiet Grace</h1>
+
+        <Card className="bg-white shadow-xl rounded-2xl p-6">
+          <CardContent className="space-y-6 text-neutral-800 text-lg leading-relaxed">
+            <p className="flex items-center gap-3 text-emerald-800 font-semibold">
+              <Landmark className="w-5 h-5" /> A Storied Setting
+            </p>
+            <p>
+              Devon carries a legacy — of stone manors, boxwoods, and Sunday drives. At its heart is the Devon Horse Show, a tradition etched into every fence line and front porch.
+            </p>
+
+            <p className="flex items-center gap-3 text-emerald-800 font-semibold">
+              <Horse className="w-5 h-5" /> Equestrian Culture
+            </p>
+            <p>
+              Beyond the ring, Devon honors its heritage in the everyday: well-kept barns beside modern kitchens, tack rooms alongside wine cellars.
+            </p>
+
+            <p className="flex items-center gap-3 text-emerald-800 font-semibold">
+              <Home className="w-5 h-5" /> Homes that Endure
+            </p>
+            <p>
+              From center-hall colonials to mid-century gems, Devon’s homes offer scale, pedigree, and peace. Gardens are tended. Trees are named.
+            </p>
+
+            <p className="flex items-center gap-3 text-emerald-800 font-semibold">
+              <Leaf className="w-5 h-5" /> Everyday Refinement
+            </p>
+            <p>
+              You’ll find your moments in the quiet here — morning walks past stone gates, a seat at Terrain’s garden café, or a perfect peach from the farmers’ market.
+            </p>
+
+            <p className="flex items-center gap-3 text-emerald-800 font-semibold">
+              <Palette className="w-5 h-5" /> Devon’s Artistic Thread
+            </p>
+            <p>
+              With nearby art centers, classical concerts, and generations of collectors, Devon fosters a creative quiet — subtle, studied, and deeply felt.
+            </p>
+          </CardContent>
+        </Card>
+      </div>
+    </div>
+  );
+}
+
+

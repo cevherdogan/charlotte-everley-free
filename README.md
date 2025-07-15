@@ -18,6 +18,7 @@ See: [`index.html`](https://cevherdogan.github.io/charlotte-everley-free/)
 ## Release Notes
 
 - [v0.3.5](https://github.com/cevherdogan/charlotte-everley-free/releases/tag/v0.3.5)
+- [v0.4.0](https://github.com/cevherdogan/charlotte-everley-free/releases/tag/v0.4.0)
 
 ## SUMMARY
 [README_SUMMARY.md](./README_SUMMARY.md)
@@ -78,6 +79,8 @@ Top-tier plan with unlimited prompts, seasonal scheduling, and full editorial se
 ### Featured Infographic
 
 [Explore the Devon Home Infographic](./articles/devon-home.html)
+[Explore](https://charlotteeverley.foundral.tech/articles/devon-home.html)
+[Explore Devon Home](https://charlotteeverley.foundral.tech/devon-home.html)
 
 With heartfelt thanks to **Charlotte Everley**—whose voice, insight, and region-rooted intelligence brought clarity and warmth to every word and visual in this project.
 
