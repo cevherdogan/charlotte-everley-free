@@ -1,5 +1,23 @@
 ## 📝 **Release Notes – Charlotte Everley Site**
 
+# Charlotte Everley – Main Line Living
+
+## Release Notes
+
+### v1.0.0 – July 2025
+
+- Launched article-first static site at [charlotteeverley.foundral.tech](https://charlotteeverley.foundral.tech)
+- Published first two lifestyle features:
+  - Berwyn: “Where the Quiet Speaks Volumes”
+  - Devon: “Tradition with a Quiet Grace”
+- SEO-enabled with `sitemap.xml`, `robots.txt`, and meta tags
+- Directory structure redesigned for scaling content, clarity, and search indexing
+- GitHub Pages integration complete
+
+---
+
+Next release: dynamic article index, MDX authoring, and image SEO enhancements.
+
 ### Version: `v0.3.5`
 
 📅 Date: 2025-07-13
