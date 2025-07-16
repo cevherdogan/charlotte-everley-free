@@ -7,13 +7,12 @@
 
 This curated archive represents over a month of creative regional storytelling, from Devon to Berwyn, Valley Forge to Wayne.
 
-![Charlotte Everley Articles Collection](../assets/charlotte-everley-articles.png)
+- [Charlotte Everley Articles Collectio](./Charlotte-Everley-Articles-Catalog.md)
 
 ## 🏡 Community Spotlights
 
 - [Devon Home](https://charlotteeverley.foundral.tech/articles/devon-home.html)
-- [Berwyn Overview](https://charlotteeverley.foundral.tech/articles/berwyn.html)
-- [Berwyn First Draft](https://charlotteeverley.foundral.tech/articles/berwyn-v1.html)
+- [Berwyn Community Overview](https://charlotteeverley.foundral.tech/articles/berwyn-community.html)
 
 ## 🗺️ Illustrated Maps & Cultural Highlights
 

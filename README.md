@@ -9,6 +9,24 @@ Live at: https://cevherdogan.github.io/charlotte-everley-free/
 
 This program welcomes both independent homeowners and those represented by agents. Whether you’re listing solo or with support, our platform enhances visibility, storytelling, and buyer engagement through curated content, listing automation, and community alignment.
 
+---
+
+Harika! Ana README.md dosyasından articles/index.md alt başlıklarına doğrudan yol vermek için aşağıdaki gibi temiz, yönlendirici ve SEO-dostu bir yapı öneriyorum:
+
+⸻
+
+📚 Explore Articles by Category
+
+Dive deeper into the stories, maps, and Main Line insights with our curated content catalog:
+	•	🏡 Community Spotlights
+Devon, Berwyn, and more—stories rooted in landscape and light.
+	•	🗺️ Illustrated Maps & Cultural Highlights
+From historic overlays to lifestyle infographics.
+	•	🤝 FSBO & Contributor Resources
+For independent sellers and creative collaborators.
+
+Want to explore everything at once? View Full Catalog
+
 
 ---
 
