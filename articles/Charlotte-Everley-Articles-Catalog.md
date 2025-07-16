@@ -1,12 +1,6 @@
----
-
-title: "Charlotte Everley Articles Catalog"
-description: "An illustrated and evolving directory of lifestyle, culture, and home storytelling across the Main Line and beyond."
-----------------------------------------------------------------------------------------------------------------------------------
+## Charlotte Everley Articles Collection
 
 Welcome to the curated catalog of Charlotte Everley's written and visual works. These articles reflect the elegance, depth, and regional intimacy of the Main Line lifestyle. Below is a decorative overview of articles created or in development — arranged by theme, awaiting publishing links.
-
-## Charlotte Everley Articles Collection
 
 This curated archive represents over a month of creative regional storytelling, from Devon to Berwyn, Valley Forge to Wayne.
 
