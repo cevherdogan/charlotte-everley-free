@@ -25,3 +25,7 @@ This curated archive represents over a month of creative regional storytelling, 
 - [Contributors](https://charlotteeverley.foundral.tech/contributors.md)
 
 > All articles are published as part of the Charlotte Everley collaborative project: a fusion of regional insight, storytelling, and elegant visual documentation.
+
+- [Berwyn Community Feature (Style Guide Edition)](articles/sb/testcase-berwyn-using-style-guide.html)
+
+- [Berwyn Community Feature (Style Guide Edition)](https://charlotte-everley.com/articles/sb/testcase-berwyn-using-style-guide.html)
