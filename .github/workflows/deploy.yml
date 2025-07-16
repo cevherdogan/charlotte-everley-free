@@ -1,0 +1,30 @@
+name: Auto Update Article Index
+
+on:
+  push:
+    paths:
+      - 'articles/*.html'
+
+jobs:
+  update-index:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '20'
+
+      - name: Run index update script
+        run: node .github/scripts/updateIndex.js
+
+      - name: Commit and push changes
+        run: |
+          git config user.name "charlotte-everley[bot]"
+          git config user.email "charlotte.everley@previewhub-dev.com"
+          git add articles/index.md
+          git diff --cached --quiet || git commit -m "🤖 Auto-update article index"
+          git push
