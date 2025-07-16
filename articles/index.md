@@ -21,7 +21,7 @@ This curated archive represents over a month of creative regional storytelling, 
 
 ## 🤝 FSBO & Contributor Resources
 
-- [FSBO Info Page](https://charlotteeverley.foundral.tech/fsbo_info_page)
++ [FSBO Info Page](../fsbo_info_page.md)
 - [Contributors](https://charlotteeverley.foundral.tech/contributors.md)
 
 > All articles are published as part of the Charlotte Everley collaborative project: a fusion of regional insight, storytelling, and elegant visual documentation.

@@ -1,0 +1,9 @@
+MacBook-Pro-2:charlotte-everley-free cevherdogan$ scripts/report_unreachable_links.sh
+❌ README.md → https://cevherdogan.github.io/charlotte-everley-free/ — 301
+❌ README.md → https://buy.stripe.com/your-trial-link — 403
+❌ README.md → https://cevherdogan.github.io/charlotte-everley-free/trial-welcome.html?checkout=valid — 301
+❌ README.md → https://cevherdogan.github.io/charlotte-everley-free/bronze-welcome.html?checkout=valid — 301
+❌ README.md → https://cevherdogan.github.io/charlotte-everley-free/silver-welcome.html?checkout=valid — 301
+❌ README.md → https://cevherdogan.github.io/charlotte-everley-free/premier-quarterly-welcome.html?checkout=valid — 301
+❌ articles/index.md → https://charlotte-everley.com/articles/sb/testcase-berwyn-using-style-guide.html — request to https://charlotte-everley.com/articles/sb/testcase-berwyn-using-style-guide.html failed, reason: getaddrinfo ENOTFOUND charlotte-everley.com
+
