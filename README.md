@@ -11,22 +11,18 @@ This program welcomes both independent homeowners and those represented by agent
 
 ---
 
-Harika! Ana README.md dosyasından articles/index.md alt başlıklarına doğrudan yol vermek için aşağıdaki gibi temiz, yönlendirici ve SEO-dostu bir yapı öneriyorum:
-
-⸻
-
-📚 Explore Articles by Category
+## 📚 Explore Articles by Category
 
 Dive deeper into the stories, maps, and Main Line insights with our curated content catalog:
-	•	🏡 Community Spotlights
-Devon, Berwyn, and more—stories rooted in landscape and light.
-	•	🗺️ Illustrated Maps & Cultural Highlights
+
+### 🏡 Community Spotlights
+Devon, Berwyn, and more — stories rooted in landscape and light.
+
+### 🗺️ Illustrated Maps & Cultural Highlights
 From historic overlays to lifestyle infographics.
-	•	🤝 FSBO & Contributor Resources
+
+### 🤝 FSBO & Contributor Resources
 For independent sellers and creative collaborators.
-
-Want to explore everything at once? View Full Catalog
-
 
 ---
 
