@@ -127,6 +127,12 @@ Start with [Berwyn](./content/berwyn) and follow us for updates on Devon, Wayne,
 Meet the minds behind this project:  
 [View Contributors →](./contributors.md)
 
+## Release Notes
+
+- [v0.3.5](https://github.com/cevherdogan/charlotte-everley-free/releases/tag/v0.3.5)
+- [v0.4.0](https://github.com/cevherdogan/charlotte-everley-free/releases/tag/v0.4.0)
+- [v0.4.1 – July 2025](https://github.com/cevherdogan/charlotte-everley-free/releases/tag/v0.4.1)  
+  Added: Camp Jarvis story, Quiet Roots essay, TE Schools feature, Historic Devon dive, and updated `index.md`.
 
 
 ---
