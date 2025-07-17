@@ -18,6 +18,54 @@ Dive deeper into the stories, maps, and Main Line insights with our curated cont
 ### 🏡 Community Spotlights
 Devon, Berwyn, and more — stories rooted in landscape and light.
 
+# 📚 Devon Historical Articles Index
+
+A curated list of community, heritage, and transit-focused articles related to Devon, Contention Lane, and surrounding areas.
+
+---
+
+## 🏛️ Faith & Community
+
+- [Teagarden Park Reflections](articles/devon/teagarden-park.html)  
+  _A quiet overview of how the park evolved through Baptist, AME, and T/E community ties._
+  
+- [Living Faith Corridor](articles/devon/sb/living-faith-corridor.html) _(sandbox)_  
+  _Experimental take on faith-to-family continuity across the corridor._
+
+---
+
+## 🏡 Living History & Local Heritage
+
+- [Living History of Devonshire Rd in Devon](articles/devon/living-history-of-devonshirerd-in-devon.html)  
+  _Exploring homes, underpasses, and trails that define Devonshire’s generational roots._
+
+- [Gratitude at 387 Devonshire Rd](articles/devon/387DevonshireRd-Gratitude.html)  
+  _A personal reflection on a home’s place in community continuity._
+
+- [Historic Record of Contention Lane](articles/devon/conention-ln.historic-record.html)  
+  _Chronological narrative of Contention Lane’s past and place in the T/E ecosystem._
+
+---
+
+## ⚾ Neighborhood & Recreation
+
+- [Devon–Strafford Little League](articles/devon/devon-strafford-little-league.html)  
+  _Local league’s evolution and its tie to neighborhood traditions._
+
+- [Camp Jarvis: A Hidden Gem](articles/devon/camp-jarvis-gem.html)  
+  _The forgotten corners of one of Devon’s earliest youth recreational hubs._
+
+---
+
+## 🚌 Transit, Trails & Connectivity
+
+- [Why T/E Trails Matter](articles/devon/te-trails-as-in-why.html)  
+  _A forward-thinking look at trail systems and local pedestrian ecology._
+
+- [TE Bus Routes Overview](articles/devon/te-bus-routes.html)  
+  _School and regional bus routes — from PTC planning to family logistics._
+
+
 ### 🗺️ Illustrated Maps & Cultural Highlights
 From historic overlays to lifestyle infographics.
 
@@ -113,7 +161,8 @@ With heartfelt thanks to **Charlotte Everley**—whose voice, insight, and regio
 - [Charlotte Everley Articles Catalog](articles/Charlotte-Everley-Articles-Catalog.md)
 - All neighborhood features are organized in the [`articles/`](./articles) directory.  
 - With its own [organizational doc guide](./articles/README.md) 
-- Start with [Berwyn](./articles/berwyn.md) — a portrait in quiet charm.
+- Start with [Devon](https://charlotteeverley.foundral.tech/articles/devon) - Work-In-Progress
+- Continue with [Berwyn](./articles/berwyn.md) — a portrait in quiet charm.
 
 ### Special Knowledge only Locals may Know or Aware Of
 - [Tracks Through Time – Devon's Rail Reverie](https://charlotteeverley.foundral.tech/articles/devon/tracks-through-time.html)
