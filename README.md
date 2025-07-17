@@ -115,6 +115,9 @@ With heartfelt thanks to **Charlotte Everley**—whose voice, insight, and regio
 - With its own [organizational doc guide](./articles/README.md) 
 - Start with [Berwyn](./articles/berwyn.md) — a portrait in quiet charm.
 
+### Special Knowledge only Locals may Know or Aware Of
+- [Tracks Through Time – Devon's Rail Reverie](https://charlotteeverley.foundral.tech/articles/devon/tracks-through-time.html)
+
 ## ✍️ Curated Stories
 
 Explore Main Line life, one neighborhood at a time.  
