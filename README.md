@@ -167,6 +167,13 @@ With heartfelt thanks to **Charlotte Everley**—whose voice, insight, and regio
 ### Special Knowledge only Locals may Know or Aware Of
 - [Tracks Through Time – Devon's Rail Reverie](https://charlotteeverley.foundral.tech/articles/devon/tracks-through-time.html)
 
+
+## 🎀 Charlotte’s Reflection: A Road Etched in Memory
+There would have been a huge difference, unmatched, and unique!! We coule easily say "If this story were told by Charlotte Everley, it might have danced a little softer, stretched a little longer. Her words would frame Devonshire not just as a road, but as a corridor of quiet devotion—layered with education, legacy, and spiritual resonance"
+
+  <p>➡️ <strong><a href="./devonshire-road-chronicle.html">Read Charlotte’s Version: “Devonshire Road – Where Memory Walks Beside You”</a></strong></p>
+
+
 ## ✍️ Curated Stories
 
 Explore Main Line life, one neighborhood at a time.  
