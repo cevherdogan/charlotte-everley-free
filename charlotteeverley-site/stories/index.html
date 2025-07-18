@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Stories – Charlotte Everley</title>
+  <meta name="description" content="Explore stories curated by Charlotte Everley, categorized by membership tiers." />
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+  <style>
+    .hidden { display: none; }
+    .badge { font-size: 0.75rem; padding: 0.25rem 0.5rem; border-radius: 0.25rem; font-weight: 600; }
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-900 font-serif">
+  <section class="max-w-5xl mx-auto px-6 py-12">
+    <h1 class="text-4xl font-bold text-green-800 mb-6 text-center">Stories by Charlotte Everley</h1>
+    <p class="text-center text-gray-600 mb-6">Browse hand-curated narratives and reflections from Devon and the Main Line.</p>
+
+    <div class="mb-4 text-center">
+      <input type="text" id="searchInput" onkeyup="searchCards()" placeholder="Search by title..." 
+             class="border border-gray-300 px-4 py-2 rounded w-full sm:w-1/2 focus:outline-none focus:ring-2 focus:ring-green-400">
+    </div>
+    <div class="flex flex-wrap justify-center gap-2 mb-8">
+      <button onclick="filterCards('all')" class="px-3 py-1 bg-gray-300 rounded hover:bg-gray-400">All</button>
+      <button onclick="filterCards('free')" class="px-3 py-1 bg-green-100 text-green-800 rounded hover:bg-green-200">Free</button>
+      <button onclick="filterCards('trial')" class="px-3 py-1 bg-yellow-100 text-yellow-800 rounded hover:bg-yellow-200">Trial</button>
+      <button onclick="filterCards('silver')" class="px-3 py-1 bg-gray-200 text-gray-800 rounded hover:bg-gray-300">Silver</button>
+      <button onclick="filterCards('gold')" class="px-3 py-1 bg-yellow-300 text-yellow-900 rounded hover:bg-yellow-400">Gold</button>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6" id="storyGrid">
+
+    <div class="p-4 bg-white rounded shadow story-card free">
+      <div class="flex justify-between items-start mb-2">
+        <h2 class="text-lg font-semibold">Living Faith Corridor</h2>
+        <span class="badge bg-green-100 text-green-800">Free</span>
+      </div>
+      <p class="text-sm text-gray-600 mb-3">Read this free tier story curated by Charlotte Everley.</p>
+      <a href="/membership/free/articles/living-faith-corridor.html" class="text-blue-700 underline text-sm">→ Read Article</a>
+    </div>
+    
+    <div class="p-4 bg-white rounded shadow story-card free">
+      <div class="flex justify-between items-start mb-2">
+        <h2 class="text-lg font-semibold">Te Bus Routes 4</h2>
+        <span class="badge bg-green-100 text-green-800">Free</span>
+      </div>
+      <p class="text-sm text-gray-600 mb-3">Read this free tier story curated by Charlotte Everley.</p>
+      <a href="/membership/free/articles/te-bus-routes-4.html" class="text-blue-700 underline text-sm">→ Read Article</a>
+    </div>
+    
+    <div class="p-4 bg-white rounded shadow story-card free">
+      <div class="flex justify-between items-start mb-2">
+        <h2 class="text-lg font-semibold">Te Bus Routes 3</h2>
+        <span class="badge bg-green-100 text-green-800">Free</span>
+      </div>
+      <p class="text-sm text-gray-600 mb-3">Read this free tier story curated by Charlotte Everley.</p>
+      <a href="/membership/free/articles/te-bus-routes-3.html" class="text-blue-700 underline text-sm">→ Read Article</a>
+    </div>
+    
+    <div class="p-4 bg-white rounded shadow story-card free">
+      <div class="flex justify-between items-start mb-2">
+        <h2 class="text-lg font-semibold">Te Bus Routes 2</h2>
+        <span class="badge bg-green-100 text-green-800">Free</span>
+      </div>
+      <p class="text-sm text-gray-600 mb-3">Read this free tier story curated by Charlotte Everley.</p>
+      <a href="/membership/free/articles/te-bus-routes-2.html" class="text-blue-700 underline text-sm">→ Read Article</a>
+    </div>
+    
+    <div class="p-4 bg-white rounded shadow story-card trial">
+      <div class="flex justify-between items-start mb-2">
+        <h2 class="text-lg font-semibold">The Hidden Stream Of Devon</h2>
+        <span class="badge bg-yellow-100 text-yellow-800">Trial</span>
+      </div>
+      <p class="text-sm text-gray-600 mb-3">Read this trial tier story curated by Charlotte Everley.</p>
+      <a href="/membership/trial/articles/The-Hidden-Stream-of-Devon.html" class="text-blue-700 underline text-sm">→ Read Article</a>
+    </div>
+    
+    <div class="p-4 bg-white rounded shadow story-card trial">
+      <div class="flex justify-between items-start mb-2">
+        <h2 class="text-lg font-semibold">Devon And Darby Outdoor Escapes</h2>
+        <span class="badge bg-yellow-100 text-yellow-800">Trial</span>
+      </div>
+      <p class="text-sm text-gray-600 mb-3">Read this trial tier story curated by Charlotte Everley.</p>
+      <a href="/membership/trial/articles/Devon-and-Darby-Outdoor-Escapes.html" class="text-blue-700 underline text-sm">→ Read Article</a>
+    </div>
+    
+    <div class="p-4 bg-white rounded shadow story-card silver">
+      <div class="flex justify-between items-start mb-2">
+        <h2 class="text-lg font-semibold">Teagarden Park</h2>
+        <span class="badge bg-gray-200 text-gray-800">Silver</span>
+      </div>
+      <p class="text-sm text-gray-600 mb-3">Read this silver tier story curated by Charlotte Everley.</p>
+      <a href="/membership/silver/articles/teagarden-park.html" class="text-blue-700 underline text-sm">→ Read Article</a>
+    </div>
+    
+    <div class="p-4 bg-white rounded shadow story-card silver">
+      <div class="flex justify-between items-start mb-2">
+        <h2 class="text-lg font-semibold">Estates Alongside The Creek</h2>
+        <span class="badge bg-gray-200 text-gray-800">Silver</span>
+      </div>
+      <p class="text-sm text-gray-600 mb-3">Read this silver tier story curated by Charlotte Everley.</p>
+      <a href="/membership/silver/articles/estates-alongside-the-creek.html" class="text-blue-700 underline text-sm">→ Read Article</a>
+    </div>
+    
+    <div class="p-4 bg-white rounded shadow story-card silver">
+      <div class="flex justify-between items-start mb-2">
+        <h2 class="text-lg font-semibold">Through Still Waters Devontributarystory</h2>
+        <span class="badge bg-gray-200 text-gray-800">Silver</span>
+      </div>
+      <p class="text-sm text-gray-600 mb-3">Read this silver tier story curated by Charlotte Everley.</p>
+      <a href="/membership/silver/articles/Through-Still-Waters-DevonTributaryStory.html" class="text-blue-700 underline text-sm">→ Read Article</a>
+    </div>
+    
+    <div class="p-4 bg-white rounded shadow story-card gold">
+      <div class="flex justify-between items-start mb-2">
+        <h2 class="text-lg font-semibold">The Hidden Stream Of Devon Long</h2>
+        <span class="badge bg-yellow-300 text-yellow-900">Gold</span>
+      </div>
+      <p class="text-sm text-gray-600 mb-3">Read this gold tier story curated by Charlotte Everley.</p>
+      <a href="/membership/gold/articles/The-Hidden-Stream-of-Devon-Long.html" class="text-blue-700 underline text-sm">→ Read Article</a>
+    </div>
+    
+    <div class="p-4 bg-white rounded shadow story-card gold">
+      <div class="flex justify-between items-start mb-2">
+        <h2 class="text-lg font-semibold">Tracing The Hidden Creek Along Contention Lane</h2>
+        <span class="badge bg-yellow-300 text-yellow-900">Gold</span>
+      </div>
+      <p class="text-sm text-gray-600 mb-3">Read this gold tier story curated by Charlotte Everley.</p>
+      <a href="/membership/gold/articles/Tracing-the-Hidden-Creek-Along-Contention-Lane.html" class="text-blue-700 underline text-sm">→ Read Article</a>
+    </div>
+    
+    <div class="p-4 bg-white rounded shadow story-card gold">
+      <div class="flex justify-between items-start mb-2">
+        <h2 class="text-lg font-semibold">Wiki Data Extrapolation</h2>
+        <span class="badge bg-yellow-300 text-yellow-900">Gold</span>
+      </div>
+      <p class="text-sm text-gray-600 mb-3">Read this gold tier story curated by Charlotte Everley.</p>
+      <a href="/membership/gold/articles/wiki-data-extrapolation.html" class="text-blue-700 underline text-sm">→ Read Article</a>
+    </div>
+    
+    <div class="p-4 bg-white rounded shadow story-card gold">
+      <div class="flex justify-between items-start mb-2">
+        <h2 class="text-lg font-semibold">Legacy Of 947Contention Lane</h2>
+        <span class="badge bg-yellow-300 text-yellow-900">Gold</span>
+      </div>
+      <p class="text-sm text-gray-600 mb-3">Read this gold tier story curated by Charlotte Everley.</p>
+      <a href="/membership/gold/articles/Legacy-of-947Contention-Lane.html" class="text-blue-700 underline text-sm">→ Read Article</a>
+    </div>
+    
+    <div class="p-4 bg-white rounded shadow story-card gold">
+      <div class="flex justify-between items-start mb-2">
+        <h2 class="text-lg font-semibold">Jug Hallow Rd And Valleyforge Splender 4 Seo</h2>
+        <span class="badge bg-yellow-300 text-yellow-900">Gold</span>
+      </div>
+      <p class="text-sm text-gray-600 mb-3">Read this gold tier story curated by Charlotte Everley.</p>
+      <a href="/membership/gold/articles/Jug-Hallow-Rd-and-ValleyForge-Splender-4-seo.html" class="text-blue-700 underline text-sm">→ Read Article</a>
+    </div>
+    
+    </div>
+  </section>
+
+  <script>
+    function filterCards(tier) {
+      const cards = document.querySelectorAll(".story-card");
+      cards.forEach(card => {
+        card.classList.remove("hidden");
+        if (tier !== 'all' && !card.classList.contains(tier)) {
+          card.classList.add("hidden");
+        }
+      });
+    }
+  
+    function searchCards() {
+      const input = document.getElementById('searchInput').value.toLowerCase();
+      const cards = document.querySelectorAll(".story-card");
+      cards.forEach(card => {
+        const title = card.querySelector("h2").innerText.toLowerCase();
+        if (title.includes(input)) {
+          card.classList.remove("hidden");
+        } else {
+          card.classList.add("hidden");
+        }
+      });
+    }
+    </script>
+</body>
+</html>
