@@ -1,0 +1,165 @@
+[
+  {
+    "title": "Living Faith Corridor",
+    "slug": "living-faith-corridor",
+    "tier": "free",
+    "summary": "Curated story in the free membership tier.",
+    "date": "2025-07-18",
+    "tags": [],
+    "featured": false,
+    "filename": "living-faith-corridor.html",
+    "image": "https://via.placeholder.com/600x300.png?text=Free+Story"
+  },
+  {
+    "title": "Te Bus Routes 4",
+    "slug": "te-bus-routes-4",
+    "tier": "free",
+    "summary": "Curated story in the free membership tier.",
+    "date": "2025-07-18",
+    "tags": [
+      "community"
+    ],
+    "featured": false,
+    "filename": "te-bus-routes-4.html",
+    "image": "https://via.placeholder.com/600x300.png?text=Free+Story"
+  },
+  {
+    "title": "Te Bus Routes 3",
+    "slug": "te-bus-routes-3",
+    "tier": "free",
+    "summary": "Curated story in the free membership tier.",
+    "date": "2025-07-18",
+    "tags": [
+      "community"
+    ],
+    "featured": false,
+    "filename": "te-bus-routes-3.html",
+    "image": "https://via.placeholder.com/600x300.png?text=Free+Story"
+  },
+  {
+    "title": "Te Bus Routes 2",
+    "slug": "te-bus-routes-2",
+    "tier": "free",
+    "summary": "Curated story in the free membership tier.",
+    "date": "2025-07-18",
+    "tags": [
+      "community"
+    ],
+    "featured": false,
+    "filename": "te-bus-routes-2.html",
+    "image": "https://via.placeholder.com/600x300.png?text=Free+Story"
+  },
+  {
+    "title": "The Hidden Stream Of Devon",
+    "slug": "The-Hidden-Stream-of-Devon",
+    "tier": "trial",
+    "summary": "Curated story in the trial membership tier.",
+    "date": "2025-07-18",
+    "tags": [],
+    "featured": false,
+    "filename": "The-Hidden-Stream-of-Devon.html",
+    "image": "https://via.placeholder.com/600x300.png?text=Trial+Story"
+  },
+  {
+    "title": "Devon And Darby Outdoor Escapes",
+    "slug": "Devon-and-Darby-Outdoor-Escapes",
+    "tier": "trial",
+    "summary": "Curated story in the trial membership tier.",
+    "date": "2025-07-18",
+    "tags": [],
+    "featured": false,
+    "filename": "Devon-and-Darby-Outdoor-Escapes.html",
+    "image": "https://via.placeholder.com/600x300.png?text=Trial+Story"
+  },
+  {
+    "title": "Teagarden Park",
+    "slug": "teagarden-park",
+    "tier": "silver",
+    "summary": "Curated story in the silver membership tier.",
+    "date": "2025-07-18",
+    "tags": [],
+    "featured": false,
+    "filename": "teagarden-park.html",
+    "image": "https://via.placeholder.com/600x300.png?text=Silver+Story"
+  },
+  {
+    "title": "Estates Alongside The Creek",
+    "slug": "estates-alongside-the-creek",
+    "tier": "silver",
+    "summary": "Curated story in the silver membership tier.",
+    "date": "2025-07-18",
+    "tags": [
+      "nature",
+      "real estate"
+    ],
+    "featured": false,
+    "filename": "estates-alongside-the-creek.html",
+    "image": "https://via.placeholder.com/600x300.png?text=Silver+Story"
+  },
+  {
+    "title": "Through Still Waters Devontributarystory",
+    "slug": "Through-Still-Waters-DevonTributaryStory",
+    "tier": "silver",
+    "summary": "Curated story in the silver membership tier.",
+    "date": "2025-07-18",
+    "tags": [],
+    "featured": false,
+    "filename": "Through-Still-Waters-DevonTributaryStory.html",
+    "image": "https://via.placeholder.com/600x300.png?text=Silver+Story"
+  },
+  {
+    "title": "The Hidden Stream Of Devon Long",
+    "slug": "The-Hidden-Stream-of-Devon-Long",
+    "tier": "gold",
+    "summary": "Curated story in the gold membership tier.",
+    "date": "2025-07-18",
+    "tags": [],
+    "featured": true,
+    "filename": "The-Hidden-Stream-of-Devon-Long.html",
+    "image": "https://via.placeholder.com/600x300.png?text=Gold+Story"
+  },
+  {
+    "title": "Tracing The Hidden Creek Along Contention Lane",
+    "slug": "Tracing-the-Hidden-Creek-Along-Contention-Lane",
+    "tier": "gold",
+    "summary": "Curated story in the gold membership tier.",
+    "date": "2025-07-18",
+    "tags": [],
+    "featured": false,
+    "filename": "Tracing-the-Hidden-Creek-Along-Contention-Lane.html",
+    "image": "https://via.placeholder.com/600x300.png?text=Gold+Story"
+  },
+  {
+    "title": "Wiki Data Extrapolation",
+    "slug": "wiki-data-extrapolation",
+    "tier": "gold",
+    "summary": "Curated story in the gold membership tier.",
+    "date": "2025-07-18",
+    "tags": [],
+    "featured": false,
+    "filename": "wiki-data-extrapolation.html",
+    "image": "https://via.placeholder.com/600x300.png?text=Gold+Story"
+  },
+  {
+    "title": "Legacy Of 947Contention Lane",
+    "slug": "Legacy-of-947Contention-Lane",
+    "tier": "gold",
+    "summary": "Curated story in the gold membership tier.",
+    "date": "2025-07-18",
+    "tags": [],
+    "featured": false,
+    "filename": "Legacy-of-947Contention-Lane.html",
+    "image": "https://via.placeholder.com/600x300.png?text=Gold+Story"
+  },
+  {
+    "title": "Jug Hallow Rd And Valleyforge Splender 4 Seo",
+    "slug": "Jug-Hallow-Rd-and-ValleyForge-Splender-4-seo",
+    "tier": "gold",
+    "summary": "Curated story in the gold membership tier.",
+    "date": "2025-07-18",
+    "tags": [],
+    "featured": false,
+    "filename": "Jug-Hallow-Rd-and-ValleyForge-Splender-4-seo.html",
+    "image": "https://via.placeholder.com/600x300.png?text=Gold+Story"
+  }
+]

@@ -194,7 +194,20 @@ Meet the minds behind this project:
   Added: Camp Jarvis story, Quiet Roots essay, TE Schools feature, Historic Devon dive, and updated `index.md`.
 
 
+## 🛠️ DEV NOTES
+
+	•	[ ] TODO: Create a GitHub Action to deploy each branch (membership-free, membership-trial, etc.) to its own subdirectory.
+
+This sets a clear development milestone and keeps things organized for future contributors (or for your future self 😉).
+
+	•	Add a checklist for content editorial workflows too?
+	•	a README root-level README summarizing the entire site architecture?
+
 ---
 
 💡 Don’t forget to update Stripe URLs in the GPT or automation tools!
+i
+
+	•	Rotate weekly using a cron + GitHub Action
+
 
