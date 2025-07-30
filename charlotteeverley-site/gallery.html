@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <!-- <title>Membership Gallery</title> -->
+  <title>Membership Gallery - Trial Subscriber)</title>
+
+  <style>
+    body {
+      font-family: sans-serif;
+      background: #f9f9f9;
+      padding: 2rem;
+    }
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 1.5rem;
+    }
+    .card {
+      background: white;
+      border-radius: 8px;
+      padding: 1rem;
+      box-shadow: 0 0 8px rgba(0,0,0,0.1);
+    }
+    .tier {
+      font-size: 0.8rem;
+      font-weight: bold;
+      padding: 0.25rem 0.5rem;
+      border-radius: 4px;
+      color: white;
+      display: inline-block;
+      margin-bottom: 0.5rem;
+    }
+    .tier.free { background: #10b981; }
+    .tier.trial { background: #3b82f6; }
+    .tier.silver { background: #a1a1aa; }
+    .tier.gold { background: #f59e0b; }
+    a {
+      color: #1e40af;
+      text-decoration: none;
+      font-weight: 500;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <!-- <h1>Membership Gallery</h1> -->
+  <h1>Membership Gallery <span style="font-size: 1rem; font-weight: 500;">(Trial Subscriber)</span></h1>
+  <div class="gallery">
+    
+    <div class="card">
+      <span class="tier trial">Trial</span><br>
+      <a href="../membership/trial/articles/Devon-and-Darby-Outdoor-Escapes.html" target="_blank">Devon-and-Darby-Outdoor-Escapes.html</a>
+    </div>
+    
+    <div class="card">
+      <span class="tier trial">Trial</span><br>
+      <a href="../membership/trial/articles/The-Hidden-Stream-of-Devon_trial.html" target="_blank">The-Hidden-Stream-of-Devon_trial.html</a>
+    </div>
+    
+    <div class="card">
+      <span class="tier free">Free</span><br>
+      <a href="../membership/free/articles/living-faith-corridor.html" target="_blank">living-faith-corridor.html</a>
+    </div>
+    
+    <div class="card">
+      <span class="tier free">Free</span><br>
+      <a href="../membership/free/articles/te-bus-routes-2.html" target="_blank">te-bus-routes-2.html</a>
+    </div>
+    
+    <div class="card">
+      <span class="tier free">Free</span><br>
+      <a href="../membership/free/articles/te-bus-routes-3.html" target="_blank">te-bus-routes-3.html</a>
+    </div>
+    
+    <div class="card">
+      <span class="tier free">Free</span><br>
+      <a href="../membership/free/articles/te-bus-routes-4.html" target="_blank">te-bus-routes-4.html</a>
+    </div>
+    
+  </div>
+</body>
+</html>
