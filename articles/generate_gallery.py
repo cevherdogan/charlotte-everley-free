@@ -1,48 +1,103 @@
+import os
 import json
 
-with open("gallery-config.json", "r") as f:
-    items = json.load(f)
+RBAC_FILE = "rbac-map.json"
+OUTPUT_HTML = "charlotteeverley-site/gallery.html"
+TIER_ORDER = ["free", "trial", "silver", "gold"]
 
-html_start = """<!DOCTYPE html>
-<html lang='en'>
-<head>
-  <meta charset='UTF-8' />
-  <title>Devon History Gallery</title>
-  <script src='https://cdn.tailwindcss.com'></script>
-</head>
-<body class='bg-gray-100 text-gray-800'>
-  <header class='bg-yellow-700 text-white py-6 text-center shadow'>
-    <h1 class='text-4xl font-bold'>Devon History Collection</h1>
-    <p class='text-sm mt-1'>Faith, Trails, Transit & Family Memories</p>
-  </header>
-  <main class='max-w-6xl mx-auto px-6 py-10'>
-    <div class='grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3'>
-"""
+def get_current_tier():
+    branch = os.popen("git rev-parse --abbrev-ref HEAD").read().strip()
+    return branch.replace("membership-", "")
 
-html_tiles = ""
-for item in items:
-    html_tiles += f"""
-      <a href="{item['filename']}" class="block bg-white rounded-lg shadow hover:shadow-xl transition overflow-hidden">
-        <img src="{item['image']}" alt="{item['title']}" class="w-full h-48 object-cover">
-        <div class="p-4">
-          <h3 class="text-lg font-semibold text-yellow-800">{item['title']}</h3>
-          <p class="text-sm text-gray-600 mt-1">{item['summary']}</p>
-        </div>
-      </a>
+def get_articles_for_tier(rbac_map, tier):
+    idx = TIER_ORDER.index(tier)
+    allowed = TIER_ORDER[:idx + 1]
+    articles = []
+    for t in allowed:
+        for article in rbac_map.get(t, []):
+            articles.append((t, article))
+    return articles
+
+def generate_card_html(tier, filename):
+    return f"""
+    <div class="card">
+      <span class="tier {tier}">{tier.capitalize()}</span><br>
+      <a href="../membership/{tier}/articles/{filename}" target="_blank">{filename}</a>
+    </div>
     """
 
-
-html_end = """
-    </div>
-  </main>
-  <footer class='text-center text-xs text-gray-500 py-6 border-t'>
-    (c) 2025 Devon Archive Gallery · Curated by Charlotte Everley Project
-  </footer>
+def generate_gallery_html(cards):
+    return f"""<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Membership Gallery</title>
+  <style>
+    body {{
+      font-family: sans-serif;
+      background: #f9f9f9;
+      padding: 2rem;
+    }}
+    h1 {{
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }}
+    .gallery {{
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 1.5rem;
+    }}
+    .card {{
+      background: white;
+      border-radius: 8px;
+      padding: 1rem;
+      box-shadow: 0 0 8px rgba(0,0,0,0.1);
+    }}
+    .tier {{
+      font-size: 0.8rem;
+      font-weight: bold;
+      padding: 0.25rem 0.5rem;
+      border-radius: 4px;
+      color: white;
+      display: inline-block;
+      margin-bottom: 0.5rem;
+    }}
+    .tier.free {{ background: #10b981; }}
+    .tier.trial {{ background: #3b82f6; }}
+    .tier.silver {{ background: #a1a1aa; }}
+    .tier.gold {{ background: #f59e0b; }}
+    a {{
+      color: #1e40af;
+      text-decoration: none;
+      font-weight: 500;
+    }}
+    a:hover {{
+      text-decoration: underline;
+    }}
+  </style>
+</head>
+<body>
+  <h1>Membership Gallery</h1>
+  <div class="gallery">
+    {''.join(cards)}
+  </div>
 </body>
-</html>
-"""
+</html>"""
 
-with open("articles/gallery.html", "w") as f:
-    f.write(html_start + html_tiles + html_end)
+def main():
+    current_tier = get_current_tier()
+    with open(RBAC_FILE, "r") as f:
+        rbac_map = json.load(f)
 
-print("✅ gallery.html generated successfully.")
+    articles = get_articles_for_tier(rbac_map, current_tier)
+    cards = [generate_card_html(tier, filename) for tier, filename in articles]
+    html = generate_gallery_html(cards)
+
+    with open(OUTPUT_HTML, "w") as f:
+        f.write(html)
+
+    print(f"✅ Gallery updated for tier: {current_tier} → {len(articles)} articles")
+
+if __name__ == "__main__":
+    main()
+
