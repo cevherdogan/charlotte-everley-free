@@ -10,6 +10,10 @@ OUTPUT_HTML = "charlotteeverley-site/gallery.html"
 # TIER_ORDER = ["free", "trial", "silver", "gold"]
 TIER_ORDER = ["free", "trial", "silver", "gold", "main"]
 
+THUMBNAIL_DIRS = ["thumbnails"]
+DEFAULT_THUMB = "thumbnails/default.jpg"
+
+
 def get_current_tier():
     branch = os.popen("git rev-parse --abbrev-ref HEAD").read().strip()
     for tier in TIER_ORDER:
