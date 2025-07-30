@@ -4,6 +4,15 @@
 
 ## v1.2.0 — Thumbnail Tiles & Metadata-Enriched Gallery 🎨
 
+### 🖼 Improvements
+- Supports explicit mapping of article thumbnails via `thumbnail-map.json`.
+- Automatically matches thumbnails in `thumbnails/` or `assets/` when no override exists.
+- Each gallery tile is enriched with:
+  - Proper title (via metadata or slug format)
+  - Description (optional from metadata)
+  - Clickable tile linking to tier-appropriate HTML page.
+
+
 ### 🖼 Visual Gallery Upgrades
 
 - 🎯 **Thumbnail Matching**

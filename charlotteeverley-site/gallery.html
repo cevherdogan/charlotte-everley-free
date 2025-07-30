@@ -1,89 +1,112 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <!-- <title>Membership Gallery</title> -->
-  <title>Membership Gallery - Trial Subscriber</title>
+<html><head><meta charset="UTF-8"><title>Membership Gallery (Main Subscriber)</title><style>
+body { font-family:sans-serif; background:#f9f9f9; padding:2rem; }
+h1 { font-size:2rem; margin-bottom:1rem; }
+.gallery { display:grid; grid-template-columns:repeat(auto-fill,minmax(260px,1fr)); gap:1.5rem; }
+.card { display:block; background:white; border-radius:8px; text-decoration:none; color:inherit; overflow:hidden; box-shadow:0 0 8px rgba(0,0,0,0.1); transition:transform .2s; }
+.card:hover { transform:scale(1.02); }
+.thumb { width:100%; height:160px; object-fit:cover; }
+.content { padding:1rem; }
+.tier { font-size:.75rem; padding:.25rem .5rem; border-radius:4px; color:white; display:inline-block; margin-bottom:.5rem; }
+.tier.free { background:#10b981 } .tier.trial { background:#3b82f6 } .tier.silver { background:#a1a1aa } .tier.gold { background:#f59e0b }
+h2 { margin:0; font-size:1.1rem } p { font-size:.9rem; color:#555 }
+</style></head><body><h1>Membership Gallery (Main Subscriber)</h1><div class="gallery">
 
-  <style>
-    body {
-      font-family: sans-serif;
-      background: #f9f9f9;
-      padding: 2rem;
-    }
-    h1 {
-      font-size: 2rem;
-      margin-bottom: 1rem;
-    }
-    .gallery {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-      gap: 1.5rem;
-    }
-    .card {
-      background: white;
-      border-radius: 8px;
-      padding: 1rem;
-      box-shadow: 0 0 8px rgba(0,0,0,0.1);
-    }
-    .tier {
-      font-size: 0.8rem;
-      font-weight: bold;
-      padding: 0.25rem 0.5rem;
-      border-radius: 4px;
-      color: white;
-      display: inline-block;
-      margin-bottom: 0.5rem;
-    }
-    .tier.free { background: #10b981; }
-    .tier.trial { background: #3b82f6; }
-    .tier.silver { background: #a1a1aa; }
-    .tier.gold { background: #f59e0b; }
-    a {
-      color: #1e40af;
-      text-decoration: none;
-      font-weight: 500;
-    }
-    a:hover {
-      text-decoration: underline;
-    }
-  </style>
-</head>
-<body>
-  <!-- <h1>Membership Gallery</h1> -->
-  <h1>Membership Gallery <span style="font-size: 1rem; font-weight: 500;">(Trial Subscriber)</span></h1>
-  <div class="gallery">
+    <a class="card" href="../membership/gold/articles/Jug-Hallow-Rd-and-ValleyForge-Splender-4-seo.html" target="_blank">
+      <img src="assets/devon-og.jpg" alt="Jug Hallow Rd And Valleyforge Splender 4 Seo" class="thumb"/>
+      <div class="content"><span class="tier gold">Gold</span>
+        <h2>Jug Hallow Rd And Valleyforge Splender 4 Seo</h2><p></p>
+      </div>
+    </a>
     
-    <div class="card">
-      <span class="tier trial">Trial</span><br>
-      <a href="../membership/trial/articles/Devon-and-Darby-Outdoor-Escapes.html" target="_blank">Devon-and-Darby-Outdoor-Escapes.html</a>
-    </div>
+    <a class="card" href="../membership/gold/articles/Legacy-of-947Contention-Lane.html" target="_blank">
+      <img src="assets/tracks-of-legacy.png" alt="Legacy Of 947Contention Lane" class="thumb"/>
+      <div class="content"><span class="tier gold">Gold</span>
+        <h2>Legacy Of 947Contention Lane</h2><p></p>
+      </div>
+    </a>
     
-    <div class="card">
-      <span class="tier trial">Trial</span><br>
-      <a href="../membership/trial/articles/The-Hidden-Stream-of-Devon_trial.html" target="_blank">The-Hidden-Stream-of-Devon_trial.html</a>
-    </div>
+    <a class="card" href="../membership/gold/articles/The-Hidden-Stream-of-Devon-gold.html" target="_blank">
+      <img src="assets/devon-og.jpg" alt="The Hidden Stream Of Devon Gold" class="thumb"/>
+      <div class="content"><span class="tier gold">Gold</span>
+        <h2>The Hidden Stream Of Devon Gold</h2><p></p>
+      </div>
+    </a>
     
-    <div class="card">
-      <span class="tier free">Free</span><br>
-      <a href="../membership/free/articles/living-faith-corridor.html" target="_blank">living-faith-corridor.html</a>
-    </div>
+    <a class="card" href="../membership/gold/articles/Tracing-the-Hidden-Creek-Along-Contention-Lane.html" target="_blank">
+      <img src="assets/tracks-of-legacy.png" alt="Tracing The Hidden Creek Along Contention Lane" class="thumb"/>
+      <div class="content"><span class="tier gold">Gold</span>
+        <h2>Tracing The Hidden Creek Along Contention Lane</h2><p></p>
+      </div>
+    </a>
     
-    <div class="card">
-      <span class="tier free">Free</span><br>
-      <a href="../membership/free/articles/te-bus-routes-2.html" target="_blank">te-bus-routes-2.html</a>
-    </div>
+    <a class="card" href="../membership/gold/articles/wiki-data-extrapolation.html" target="_blank">
+      <img src="assets/devon-og.jpg" alt="Wiki Data Extrapolation" class="thumb"/>
+      <div class="content"><span class="tier gold">Gold</span>
+        <h2>Wiki Data Extrapolation</h2><p></p>
+      </div>
+    </a>
     
-    <div class="card">
-      <span class="tier free">Free</span><br>
-      <a href="../membership/free/articles/te-bus-routes-3.html" target="_blank">te-bus-routes-3.html</a>
-    </div>
+    <a class="card" href="../membership/silver/articles/Through-Still-Waters-DevonTributaryStory.html" target="_blank">
+      <img src="assets/valleyforge-memorial-gardens.png" alt="Through Still Waters Devontributarystory" class="thumb"/>
+      <div class="content"><span class="tier silver">Silver</span>
+        <h2>Through Still Waters Devontributarystory</h2><p></p>
+      </div>
+    </a>
     
-    <div class="card">
-      <span class="tier free">Free</span><br>
-      <a href="../membership/free/articles/te-bus-routes-4.html" target="_blank">te-bus-routes-4.html</a>
-    </div>
+    <a class="card" href="../membership/silver/articles/estates-alongside-the-creek.html" target="_blank">
+      <img src="assets/devon-og.jpg" alt="Estates Alongside The Creek" class="thumb"/>
+      <div class="content"><span class="tier silver">Silver</span>
+        <h2>Estates Alongside The Creek</h2><p></p>
+      </div>
+    </a>
     
-  </div>
-</body>
-</html>
+    <a class="card" href="../membership/silver/articles/teagarden-park.html" target="_blank">
+      <img src="assets/devon-home-infographic.png" alt="Teagarden Park" class="thumb"/>
+      <div class="content"><span class="tier silver">Silver</span>
+        <h2>Teagarden Park</h2><p></p>
+      </div>
+    </a>
+    
+    <a class="card" href="../membership/trial/articles/Devon-and-Darby-Outdoor-Escapes.html" target="_blank">
+      <img src="assets/devon-og.jpg" alt="Devon And Darby Outdoor Escapes" class="thumb"/>
+      <div class="content"><span class="tier trial">Trial</span>
+        <h2>Devon And Darby Outdoor Escapes</h2><p></p>
+      </div>
+    </a>
+    
+    <a class="card" href="../membership/trial/articles/The-Hidden-Stream-of-Devon_trial.html" target="_blank">
+      <img src="assets/devon-og.jpg" alt="The Hidden Stream Of Devon_Trial" class="thumb"/>
+      <div class="content"><span class="tier trial">Trial</span>
+        <h2>The Hidden Stream Of Devon_Trial</h2><p></p>
+      </div>
+    </a>
+    
+    <a class="card" href="../membership/free/articles/living-faith-corridor.html" target="_blank">
+      <img src="assets/devon-og.jpg" alt="Living Faith Corridor" class="thumb"/>
+      <div class="content"><span class="tier free">Free</span>
+        <h2>Living Faith Corridor</h2><p></p>
+      </div>
+    </a>
+    
+    <a class="card" href="../membership/free/articles/te-bus-routes-2.html" target="_blank">
+      <img src="assets/devon-og.jpg" alt="Te Bus Routes 2" class="thumb"/>
+      <div class="content"><span class="tier free">Free</span>
+        <h2>Te Bus Routes 2</h2><p></p>
+      </div>
+    </a>
+    
+    <a class="card" href="../membership/free/articles/te-bus-routes-3.html" target="_blank">
+      <img src="assets/devon-og.jpg" alt="Te Bus Routes 3" class="thumb"/>
+      <div class="content"><span class="tier free">Free</span>
+        <h2>Te Bus Routes 3</h2><p></p>
+      </div>
+    </a>
+    
+    <a class="card" href="../membership/free/articles/te-bus-routes-4.html" target="_blank">
+      <img src="assets/devon-og.jpg" alt="Te Bus Routes 4" class="thumb"/>
+      <div class="content"><span class="tier free">Free</span>
+        <h2>Te Bus Routes 4</h2><p></p>
+      </div>
+    </a>
+    </div></body></html>

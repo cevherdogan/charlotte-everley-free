@@ -7,7 +7,8 @@ THUMBNAIL_MAP_FILE = "thumbnail-map.json"
 THUMBNAIL_DIRS = ["thumbnails", "assets"]
 DEFAULT_THUMB = "assets/devon-og.jpg"
 OUTPUT_HTML = "charlotteeverley-site/gallery.html"
-TIER_ORDER = ["free", "trial", "silver", "gold"]
+# TIER_ORDER = ["free", "trial", "silver", "gold"]
+TIER_ORDER = ["free", "trial", "silver", "gold", "main"]
 
 def get_current_tier():
     branch = os.popen("git rev-parse --abbrev-ref HEAD").read().strip()
