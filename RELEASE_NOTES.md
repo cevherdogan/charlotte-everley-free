@@ -4,6 +4,30 @@
 
 ## Release Notes
 
+## v1.1.0 — RBAC Gallery Engine 🎉
+
+### ✨ Features
+
+- 💡 **RBAC-Driven Article Access**
+  - Each branch (`membership-free`, `-trial`, `-silver`, `-gold`) contains its own gated content
+  - `rbac-map.json` governs tier-specific access
+  - `test_rbac_access.py` validates visibility rules per simulated user
+
+- 🖼 **Responsive Gallery Generator**
+  - `generate_gallery.py` dynamically creates a tile-based HTML gallery
+  - Renders only accessible articles based on current Git branch
+  - Tier badges, article links, and hierarchy-aware ordering
+
+- 🔁 **Visual Testing Script**
+  - `view_gallery.sh` regenerates and opens tier-based gallery
+  - `demo_membership_galleries.sh` cycles through all membership levels for visual QA
+
+- 🧪 **Testing + Documentation**
+  - `tests/RBAC_TEST_GUIDE.md` documents setup and testing flow
+  - `README_DEMO_RBAC.md` provides clear onboarding + usage
+
+---
+
 ### v1.0.0 – July 2025
 
 - Launched article-first static site at [charlotteeverley.foundral.tech](https://charlotteeverley.foundral.tech)
