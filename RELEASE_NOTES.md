@@ -2,7 +2,69 @@
 
 # Charlotte Everley – Main Line Living
 
-## Release Notes
+## v1.2.0 — Thumbnail Tiles & Metadata-Enriched Gallery 🎨
+
+### 🖼 Visual Gallery Upgrades
+
+- 🎯 **Thumbnail Matching**
+  - Gallery tiles now automatically include matching images from the `thumbnails/` directory
+  - Filename-based mapping: e.g., `teagarden-park.html` → `thumbnails/teagarden-park.jpg`
+  - Supports `.jpg` or `.png` (first match wins)
+
+- 🧠 **Metadata Overlay Support**
+  - New file: `article-metadata.json` (optional)
+    - Supports `title`, `description`, and `thumbnail override` per article
+  - Used to enrich each gallery tile with:
+    - Human-friendly title
+    - Short descriptive text
+    - Custom thumbnail path (optional)
+
+- 🔗 **Fully Clickable Tiles**
+  - Entire gallery card is now clickable
+  - Links to: `membership/{tier}/articles/{filename}`
+  - Respects branch-level access logic
+
+---
+
+### 📁 Example Metadata Structure
+
+```json
+{
+  "The-Hidden-Stream-of-Devon_gold.html": {
+    "title": "The Hidden Stream (Gold Edition)",
+    "description": "An extended look into Devon’s cultural waterways.",
+    "thumbnail": "custom/hiddengold.jpg"
+  }
+}
+````
+
+---
+
+### 🛠 Required Folders
+
+* `thumbnails/`: image bank for visual gallery
+* `article-metadata.json`: optional config to enrich or override gallery display per article
+
+---
+
+### 📘 How to Use
+
+1. Add matching thumbnails to `thumbnails/` using article slug naming
+2. (Optional) Create or edit `article-metadata.json`
+3. Regenerate gallery:
+
+```bash
+./view_gallery.sh
+```
+
+4. View live:
+
+```bash
+open charlotteeverley-site/gallery.html
+```
+
+---
+
 
 ## v1.1.0 — RBAC Gallery Engine 🎉
 
