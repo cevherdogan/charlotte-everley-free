@@ -1,0 +1,66 @@
+name: Berwyn SEO Style Guide
+description: >
+  Style guide for generating cozy, literary-themed community content tailored for Berwyn.
+  Guides font usage, tone, colors, layout and content structure for SEO-optimized digital storytelling.
+
+theme:
+  font_family: "'Georgia', serif"
+  font_color: "#2c2c2c"
+  accent_colors:
+    primary: "#14532d"     # Forest green
+    secondary: "#10b981"   # Lime green
+  background_color: "#f9f9f7"
+  layout:
+    max_width: "900px"
+    padding: "2rem"
+    margin: "2rem auto"
+
+highlight_block:
+  background: "#ecfdf5"
+  border_left: "4px solid #10b981"
+  italic: true
+  padding: "0.5rem 1rem"
+
+image_style:
+  width: "100%"
+  border_radius: "10px"
+  shadow: "0 6px 14px rgba(0, 0, 0, 0.1)"
+
+structure:
+  - section: "Morning Rituals"
+    icon: "🌄"
+    tone: "Warm, neighborly, food"
+  - section: "Real Homes, Real Community"
+    icon: "🏘️"
+    tone: "Architecture, social"
+  - section: "Green Spaces"
+    icon: "🌳"
+    tone: "Nature, wellness"
+  - section: "The Town That Shows Up"
+    icon: "🎭"
+    tone: "Culture, support"
+
+keywords:
+  primary: ["community", "Berwyn", "neighborhood", "cozy", "green space"]
+  seo_tags: ["berwyn lifestyle", "main line community", "local culture", "walkability"]
+
+html_snippets:
+  body_style: "background:#f9f9f7; max-width:900px; margin:2rem auto; padding:2rem;"
+  h1_style: "color:#14532d;"
+  h2_style: "color:#166534;"
+  image_class: "rounded shadow w-full"
+
+community_tone_reference:
+  - community: "Devon"
+    font: "Playfair + Inter"
+    color: "Emerald"
+    tone: "Elegant, serene, artistic"
+  - community: "Berwyn"
+    font: "Georgia"
+    color: "Forest + Warm Gray"
+    tone: "Cozy, literary, lived-in"
+  - community: "Haverford"
+    font: "TBD"
+    color: "Indigo"
+    tone: "Academic, refined"
+

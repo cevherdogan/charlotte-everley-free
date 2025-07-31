@@ -1,0 +1,59 @@
+name: STYLE_GUIDE_387DEVONSHIRE
+description: >
+  A style guide capturing the design and layout of the "387 Devonshire" article page,
+  focused on visually poetic narrative delivery using structured headers, emphasized pull quotes,
+  and integrated imagery with narrative.
+
+layout:
+  type: full-width-scroll
+  sections:
+    - hero_image: true
+    - intro_paragraph: emphasized
+    - quote_blocks: multiple
+    - visual_breaks: with_horizontal_lines_or_spacing
+    - conclusion: poetic_summary
+
+typography:
+  base_font: serif
+  header_font: sans-serif
+  h1_style: large, uppercase, centered
+  h2_style: italic, soft_weight
+  quote_style:
+    font: cursive
+    color: "#666"
+    size: larger
+    decoration: indent_and_margin
+
+colors:
+  background: white
+  text: "#111"
+  accent: "#b48b6f"
+  border: light_gray
+
+components:
+  hero:
+    include: large_header_image
+    overlay_title: true
+  pull_quotes:
+    emphasize_with_border: true
+    font_style: italic
+    alignment: center_or_float
+  image_positioning:
+    strategy: inline_centered_or_wrapped
+
+rules:
+  - Keep paragraph blocks short (2–4 sentences).
+  - Use poetic transitions and rhetorical questions.
+  - Integrate contextual captions with images.
+  - Maintain visual rhythm through whitespace.
+
+metadata:
+  source: 387DevonshireRd-Gratitude.html
+  intended_use: digital_art_storytelling
+  creator: Charlotte Everley
+
+usage:
+  - Apply to articles where emotional memory or gratitude is the theme.
+  - Suitable for reflective or semi-autobiographical storytelling.
+  - Recommended for pieces with heavy use of family narrative, location memory, or time travel motifs.
+

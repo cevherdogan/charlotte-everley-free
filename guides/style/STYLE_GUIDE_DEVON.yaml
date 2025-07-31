@@ -1,0 +1,61 @@
+name: devon_seo_style_guide
+description: >
+  SEO and content style guide for the Devon edition, emphasizing heritage, natural beauty,
+  and serene aesthetics through layout, typography, and visual storytelling.
+
+layout:
+  theme: "Emerald + Cream"
+  css_framework: "Tailwind CSS"
+  classes:
+    header: "text-emerald-900 font-serif text-3xl"
+    subheader: "text-emerald-700 font-semibold text-xl"
+    body: "text-gray-800 font-sans text-base leading-relaxed"
+    image: "rounded-md shadow-md my-6"
+    card: "bg-white p-6 rounded-lg shadow hover:shadow-xl transition"
+    button: "bg-emerald-700 text-white px-4 py-2 rounded hover:bg-emerald-800"
+    container: "max-w-4xl mx-auto px-4 sm:px-6 lg:px-8"
+
+fonts:
+  heading: "Playfair Display"
+  body: "Inter"
+  sources:
+    - "https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap"
+    - "https://fonts.googleapis.com/css2?family=Inter&display=swap"
+
+seo_rules:
+  title_structure: "[Location/Topic] – Storytelling from Devon"
+  meta_description: >
+    Capture Devon’s historic charm and natural elegance through well-crafted
+    keywords, meta summaries (155-165 chars), and evocative headers.
+  slug_conventions: "lowercase-with-dashes"
+  keyword_inclusion:
+    - Use in H1 or H2
+    - Use in first 150 words
+    - Use in alt text
+  accessibility:
+    - All images must include descriptive alt text
+    - Avoid color-only cues; support screen readers
+
+content_guidelines:
+  tone: "Warm, descriptive, historical"
+  voice: "Curious narrator"
+  image_usage: "Local imagery with captions and source attributions"
+  preferred_image_styles: ["postcard", "map fragment", "trail signage"]
+  paragraph_style: "Short to medium, 3–6 lines max"
+  section_headings: "Use Playfair-styled H2s to divide major sections"
+
+call_to_action:
+  include_cta: true
+  placement: "Bottom of article"
+  style: "button"
+  text: "Explore more stories of Devon"
+
+categories:
+  - devon
+  - local-history
+  - green-heritage
+  - tranquil-towns
+
+version: "1.0.0"
+
+

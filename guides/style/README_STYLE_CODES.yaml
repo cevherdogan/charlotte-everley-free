@@ -1,0 +1,40 @@
+style_guide:
+  name: "Devon: 387Devonshire Style"
+  description: >
+    This style guide defines a refined, emotionally evocative HTML structure for storytelling within the Devon locale.
+    It combines sophisticated serif typography, full-width imagery, scroll-triggered animations, and sectioned narration.
+  design_principles:
+    - Refined, literary narrative
+    - Scroll-based reading flow
+    - Emphasis on quotes and visual rhythm
+  layout:
+    - header: large serif title, centered
+    - sections:
+        - hero_image: full-width, top
+        - quote_blocks: styled pullquotes
+        - alternating_text_image: left/right image/text blocks
+        - embedded_artifact: inline SVG or asset poster
+  components:
+    typography:
+      font_family: "'Playfair Display', serif"
+      headings: large, centered, with generous top padding
+      body_text: readable, slightly spaced paragraphs
+    color_palette:
+      background: "#f9f9f9"
+      text: "#222"
+      highlight: "#b4a078"
+    assets:
+      default_image: "assets/devon-og.jpg"
+      fallback_thumbnail: "assets/default.png"
+  interactivity:
+    scroll_animations: true
+    responsive: true
+  constraints:
+    max_width: "960px"
+    min_readability_font_size: "16px"
+  applicable_to:
+    - Devon
+    - Heritage Homes
+    - Literary storytelling formats
+  example_html: "articles/devon/387DevonshireRd-Gratitude.html"
+

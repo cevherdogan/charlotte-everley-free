@@ -1,0 +1,77 @@
+seo_style_guide:
+  title_tag:
+    format: "[Primary Keyword or Road Name] | [Nearby Feature or Location]"
+    max_length: 60
+    example: "Jug Hollow Road & Valley Forge Splendor | Near 387 Devonshire Rd, Devon PA"
+    notes:
+      - "Place the most relevant keyword first"
+      - "Include recognizable local terms"
+  
+  meta_description:
+    length: "150-160 characters"
+    example: "Explore scenic Jug Hollow Road near Valley Forge National Park and discover homes for sale by owner, including 387 Devonshire Rd in Devon, PA."
+    tips:
+      - "Use geolocation: town, state"
+      - "Include key call-to-action verbs"
+      - "Mention real estate if relevant (e.g., FSBO, Zillow)"
+  
+  meta_keywords:
+    include:
+      - road names
+      - town names
+      - real estate terms
+      - nearby landmarks
+      - common search phrases (e.g., "Zillow Devon PA")
+    legacy: true
+
+  headings:
+    H1:
+      content: "Main article title"
+      example: "Jug Hollow Road & Valley Forge Splendor"
+    H2:
+      content: "Logical subsections with optional numbering"
+      example: "1. Distance & Route"
+    best_practices:
+      - "Use numbered sections when helpful"
+      - "Add id attributes for in-page anchors"
+
+  links:
+    external:
+      behavior: "Open in new tab"
+      attributes:
+        - target="_blank"
+        - class="text-blue-700 underline"
+      domains: ["nps.gov", "zillow.com", "local township websites"]
+
+  images:
+    attributes:
+      - alt: "Descriptive label"
+      - class: "rounded shadow"
+      - dimensions: "w-full h-64"
+    recommended:
+      - trail maps
+      - neighborhood photos
+      - park landmarks
+
+  maps:
+    embed: "Google Maps iframe"
+    size: { width: "100%", height: "h-64 to h-96" }
+    notes:
+      - "Use with marker set to article focus"
+
+  cta_blocks:
+    use: true
+    style:
+      - background: "bg-green-100"
+      - title_font: "bold"
+    content:
+      - FSBO listing
+      - open house info
+      - neighborhood regulations
+
+  references:
+    style: "APA"
+    placement: "Bottom of article"
+    type: "Links to township, census, parks, or home listings"
+
+

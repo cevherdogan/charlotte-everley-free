@@ -1,0 +1,60 @@
+name: STYLE_GUIDE_DEVON_ENHANCED
+description: >
+  A comprehensive style guide for presenting heritage narratives and place-based storytelling
+  with an educational and historical aesthetic. Ideal for legacy-rich town profiles.
+
+layout:
+  type: split-and-scroll
+  sections:
+    - title_banner: with emblem or location marker
+    - intro_summary: in grid or boxed text
+    - fact_sections: with icon or image thumbnails
+    - feature_story: linear narrative with images
+    - visual_map: optional, geo or cultural maps
+    - call_to_action: reflective or shareable quote
+
+typography:
+  base_font: clean_serif
+  header_font: bold_sans
+  h1_style: small_caps, margin_bottom
+  h2_style: underline_or_color_bar
+  paragraph_style:
+    spacing: relaxed
+    alignment: justified_or_left
+    line_height: 1.6
+
+colors:
+  background: "#fdfdfb"
+  text: "#222"
+  highlight: "#004c3f"
+  accents:
+    quote: "#115e59"
+    banner: "#e0e0e0"
+
+components:
+  infographic_cards:
+    layout: horizontal_grid
+    usage: highlight demographics, education, trails
+  inline_figures:
+    caption_style: italic_small
+    alignment: center
+  block_quotes:
+    style: teal_border_left
+    font: Georgia, serif
+
+rules:
+  - Use informative headers for skimmable flow.
+  - All figures must be accompanied by narrative.
+  - Balance factual and emotional tone.
+  - Emphasize local authenticity with map or symbol.
+
+metadata:
+  source: devon-home.html
+  intended_use: cultural or community history pages
+  creator: Charlotte Everley Collective
+
+usage:
+  - Ideal for township introductions or welcome articles.
+  - Apply to historically rooted or school-related topics.
+  - Supports both visual and textual storytelling.
+

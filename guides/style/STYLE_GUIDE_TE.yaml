@@ -1,0 +1,32 @@
+style_guide:
+  id: STYLE_GUIDE_TE
+  title: TE School Showcase
+  description: >
+    Scholarly layout with blue & gold accents, Open Sans and Roboto Slab fonts, education emojis,
+    and real voices from the TE community. Academic yet inviting. This layout is used for articles 
+    that aim to highlight educational excellence and community insights from Tredyffrin/Easttown.
+  colors:
+    primary: "#1D4ED8"     # Blue
+    accent: "#FACC15"      # Gold
+    background: "#F8FAFC"  # Light gray background for clarity
+  fonts:
+    header: "Roboto Slab, serif"
+    body: "Open Sans, sans-serif"
+  components:
+    - type: hero
+      layout: image-left
+      theme: academic
+      icon: "🎓"
+    - type: blockquote
+      style: pull-quote
+      source: "community voices"
+    - type: infographic
+      description: Visual aid emphasizing key educational data
+  usage:
+    - Apply to articles that promote schools, education, or community outreach
+    - Use educational terminology and tone throughout
+    - Include real quotes, testimonials, or data when available
+  examples:
+    - file: STYLE_GUIDE_TE.md
+      rel_path: guides/style/STYLE_GUIDE_TE.md
+
