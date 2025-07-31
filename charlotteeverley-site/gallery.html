@@ -1,116 +1,135 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="UTF-8">
-  <title>Membership Gallery – Main</title>
-  <style>
-    body { font-family: sans-serif; padding: 20px; }
-    .tiles { display: flex; flex-wrap: wrap; gap: 20px; }
-    .card {
-      width: 240px; text-decoration: none; color: black;
-      border: 1px solid #ccc; border-radius: 6px; overflow: hidden;
-      box-shadow: 1px 2px 4px rgba(0,0,0,0.1);
-    }
-    .card img { width: 100%; height: 150px; object-fit: cover; }
-    .label {
-      font-size: 12px; font-weight: bold; padding: 4px 8px;
-      display: inline-block; border-radius: 4px; margin: 6px;
-    }
-    .label.free { background: #10b981; color: white; }
-    .label.trial { background: #3b82f6; color: white; }
-    .label.silver { background: #a1a1aa; color: white; }
-    .label.gold { background: #f59e0b; color: black; }
-    .caption { font-size: 14px; font-weight: 600; padding: 10px; }
-  </style>
-</head>
-<body>
-  <h1>Membership Gallery – Main</h1>
-  <div class="tiles">
-    
-    <a class="card" href="/articles/devon/sb/living-faith-corridor.html">
-        <img src="assets/devon-og.jpg" alt="Living Faith Corridor">
-        <div class="label free">Free</div>
-        <div class="caption">Living Faith Corridor</div>
-    </a>
-    
-    <a class="card" href="/articles/devon/sb/te-bus-routes-2.html">
-        <img src="assets/devon-og.jpg" alt="Te Bus Routes 2">
-        <div class="label free">Free</div>
-        <div class="caption">Te Bus Routes 2</div>
-    </a>
-    
-    <a class="card" href="/articles/devon/sb/te-bus-routes-3.html">
-        <img src="assets/devon-og.jpg" alt="Te Bus Routes 3">
-        <div class="label free">Free</div>
-        <div class="caption">Te Bus Routes 3</div>
-    </a>
-    
-    <a class="card" href="/articles/devon/sb/te-bus-routes-4.html">
-        <img src="assets/devon-og.jpg" alt="Te Bus Routes 4">
-        <div class="label free">Free</div>
-        <div class="caption">Te Bus Routes 4</div>
-    </a>
-    
-    <a class="card" href="/articles/devon/Devon-and-Darby-Outdoor-Escapes.html">
-        <img src="assets/devon-og.jpg" alt="Devon And Darby Outdoor Escapes">
-        <div class="label trial">Trial</div>
-        <div class="caption">Devon And Darby Outdoor Escapes</div>
-    </a>
-    
-    <a class="card" href="/articles/The-Hidden-Stream-of-Devon_trial.html">
-        <img src="assets/devon-og.jpg" alt="The Hidden Stream Of Devon_Trial">
-        <div class="label trial">Trial</div>
-        <div class="caption">The Hidden Stream Of Devon_Trial</div>
-    </a>
-    
-    <a class="card" href="/articles/devon/Through-Still-Waters-DevonTributaryStory.html">
-        <img src="assets/devon-og.jpg" alt="Through Still Waters Devontributarystory">
-        <div class="label silver">Silver</div>
-        <div class="caption">Through Still Waters Devontributarystory</div>
-    </a>
-    
-    <a class="card" href="/articles/devon/estates-alongside-the-creek.html">
-        <img src="assets/devon-og.jpg" alt="Estates Alongside The Creek">
-        <div class="label silver">Silver</div>
-        <div class="caption">Estates Alongside The Creek</div>
-    </a>
-    
-    <a class="card" href="/articles/devon/teagarden-park.html">
-        <img src="assets/devon-og.jpg" alt="Teagarden Park">
-        <div class="label silver">Silver</div>
-        <div class="caption">Teagarden Park</div>
-    </a>
-    
+
+    <html>
+    <head>
+        <title>Membership Gallery – Main</title>
+        <style>
+            body { font-family: sans-serif; padding: 20px; }
+            .tiles { display: flex; flex-wrap: wrap; gap: 20px; }
+            .card {
+                width: 240px; text-decoration: none; color: black;
+                border: 1px solid #ccc; border-radius: 6px; overflow: hidden;
+                box-shadow: 1px 2px 4px rgba(0,0,0,0.1);
+            }
+            .card img { width: 100%; height: 150px; object-fit: cover; }
+            .label {
+                font-size: 12px; font-weight: bold; padding: 4px 8px;
+                display: inline-block; border-radius: 4px; margin: 6px;
+            }
+            .label.free { background: #10b981; color: white; }
+            .label.trial { background: #3b82f6; color: white; }
+            .label.silver { background: #6b7280; color: white; }
+            .label.gold { background: #f59e0b; color: white; }
+            .label.featured { background: #8b5cf6; color: white; }
+            .caption { font-size: 14px; font-weight: 600; padding: 10px; }
+        </style>
+    </head>
+    <body>
+        <h1>Membership Gallery – Main</h1>
+        <div class="tiles">
     <a class="card" href="/articles/vfp/Jug-Hallow-Rd-and-ValleyForge-Splender-4-seo.html">
-        <img src="assets/devon-og.jpg" alt="Jug Hallow Rd And Valleyforge Splender 4 Seo">
+        <img src="/assets/default.png" alt="Jug Hallow Rd And Valleyforge Splender 4 Seo">
         <div class="label gold">Gold</div>
         <div class="caption">Jug Hallow Rd And Valleyforge Splender 4 Seo</div>
     </a>
     
+
     <a class="card" href="/articles/devon/Legacy-of-947Contention-Lane.html">
-        <img src="assets/devon-og.jpg" alt="Legacy Of 947Contention Lane">
+        <img src="/assets/default.png" alt="Legacy Of 947Contention Lane">
         <div class="label gold">Gold</div>
         <div class="caption">Legacy Of 947Contention Lane</div>
     </a>
     
+
     <a class="card" href="/articles/The-Hidden-Stream-of-Devon-gold.html">
-        <img src="assets/devon-og.jpg" alt="The Hidden Stream Of Devon Gold">
+        <img src="/assets/default.png" alt="The Hidden Stream Of Devon Gold">
         <div class="label gold">Gold</div>
         <div class="caption">The Hidden Stream Of Devon Gold</div>
     </a>
     
+
     <a class="card" href="/articles/devon/Tracing-the-Hidden-Creek-Along-Contention-Lane.html">
-        <img src="assets/devon-og.jpg" alt="Tracing The Hidden Creek Along Contention Lane">
+        <img src="/assets/default.png" alt="Tracing The Hidden Creek Along Contention Lane">
         <div class="label gold">Gold</div>
         <div class="caption">Tracing The Hidden Creek Along Contention Lane</div>
     </a>
     
+
     <a class="card" href="/articles/devon/wiki-data-extrapolation.html">
-        <img src="assets/devon-og.jpg" alt="Wiki Data Extrapolation">
+        <img src="/assets/default.png" alt="Wiki Data Extrapolation">
         <div class="label gold">Gold</div>
         <div class="caption">Wiki Data Extrapolation</div>
     </a>
     
-  </div>
-</body>
-</html>
+
+    <a class="card" href="/articles/devon/Through-Still-Waters-DevonTributaryStory.html">
+        <img src="/assets/default.png" alt="Through Still Waters Devontributarystory">
+        <div class="label silver">Silver</div>
+        <div class="caption">Through Still Waters Devontributarystory</div>
+    </a>
+    
+
+    <a class="card" href="/articles/devon/estates-alongside-the-creek.html">
+        <img src="/assets/default.png" alt="Estates Alongside The Creek">
+        <div class="label silver">Silver</div>
+        <div class="caption">Estates Alongside The Creek</div>
+    </a>
+    
+
+    <a class="card" href="/articles/devon/teagarden-park.html">
+        <img src="/assets/default.png" alt="Teagarden Park">
+        <div class="label silver">Silver</div>
+        <div class="caption">Teagarden Park</div>
+    </a>
+    
+
+    <a class="card" href="/articles/devon/Devon-and-Darby-Outdoor-Escapes.html">
+        <img src="/assets/default.png" alt="Devon And Darby Outdoor Escapes">
+        <div class="label trial">Trial</div>
+        <div class="caption">Devon And Darby Outdoor Escapes</div>
+    </a>
+    
+
+    <a class="card" href="/articles/The-Hidden-Stream-of-Devon_trial.html">
+        <img src="/assets/default.png" alt="The Hidden Stream Of Devon_Trial">
+        <div class="label trial">Trial</div>
+        <div class="caption">The Hidden Stream Of Devon_Trial</div>
+    </a>
+    
+
+    <a class="card" href="/articles/devon/sb/living-faith-corridor.html">
+        <img src="/assets/default.png" alt="Living Faith Corridor">
+        <div class="label free">Free</div>
+        <div class="caption">Living Faith Corridor</div>
+    </a>
+    
+
+    <a class="card" href="/articles/devon/sb/te-bus-routes-2.html">
+        <img src="/assets/default.png" alt="Te Bus Routes 2">
+        <div class="label free">Free</div>
+        <div class="caption">Te Bus Routes 2</div>
+    </a>
+    
+
+    <a class="card" href="/articles/devon/sb/te-bus-routes-3.html">
+        <img src="/assets/default.png" alt="Te Bus Routes 3">
+        <div class="label free">Free</div>
+        <div class="caption">Te Bus Routes 3</div>
+    </a>
+    
+
+    <a class="card" href="/articles/devon/sb/te-bus-routes-4.html">
+        <img src="/assets/default.png" alt="Te Bus Routes 4">
+        <div class="label free">Free</div>
+        <div class="caption">Te Bus Routes 4</div>
+    </a>
+    
+
+    <a class="card" href="/articles/gallery.html">
+        <img src="/assets/charlotte-everley-articles.png" alt="Legacy Visual Gallery">
+        <div class="label featured">Featured Posters</div>
+        <div class="caption">Legacy Digital Gallery</div>
+    </a>
+    </div>
+    </body>
+    </html>
+    
