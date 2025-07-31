@@ -7,12 +7,7 @@ THUMBNAIL_MAP_FILE = "thumbnail-map.json"
 THUMBNAIL_DIRS = ["thumbnails", "assets"]
 DEFAULT_THUMB = "assets/devon-og.jpg"
 OUTPUT_HTML = "charlotteeverley-site/gallery.html"
-# TIER_ORDER = ["free", "trial", "silver", "gold"]
 TIER_ORDER = ["free", "trial", "silver", "gold", "main"]
-
-THUMBNAIL_DIRS = ["thumbnails"]
-DEFAULT_THUMB = "thumbnails/default.jpg"
-
 
 def get_current_tier():
     branch = os.popen("git rev-parse --abbrev-ref HEAD").read().strip()
@@ -20,14 +15,6 @@ def get_current_tier():
         if tier in branch:
             return tier
     raise ValueError(f"Cannot determine member tier from '{branch}'")
-
-def get_articles_for_tier(rbac_map, tier):
-    idx = TIER_ORDER.index(tier)
-    allowed = TIER_ORDER[:idx+1]
-    articles = []
-    for t in reversed(allowed):
-        articles.extend((t, a) for a in rbac_map.get(t, []))
-    return articles
 
 def load_json(path):
     if os.path.exists(path):
@@ -48,13 +35,24 @@ def find_thumbnail(article, slug):
                 return p
     return DEFAULT_THUMB
 
+def resolve_link(article):
+    # Try various paths in descending order
+    for tier in reversed(TIER_ORDER):
+        p = f"membership-{tier}/articles/{article}"
+        if os.path.exists(p):
+            return p
+    for root, _, files in os.walk("articles"):
+        if article in files:
+            return os.path.relpath(os.path.join(root, article), "charlotteeverley-site")
+    return f"#missing:{article}"
+
 def generate_card_html(tier, article):
     slug = os.path.splitext(article)[0]
     m = meta.get(article, {})
     title = m.get("title", slug.replace("-", " ").title())
     desc = m.get("description", "")
     thumb = find_thumbnail(article, slug)
-    link = f"../membership/{tier}/articles/{article}"
+    link = resolve_link(article)
     return f"""
     <a class="card" href="{link}" target="_blank">
       <img src="{thumb}" alt="{title}" class="thumb"/>
@@ -63,6 +61,14 @@ def generate_card_html(tier, article):
       </div>
     </a>
     """
+
+def get_articles_for_tier(rbac_map, tier):
+    idx = TIER_ORDER.index(tier)
+    allowed = TIER_ORDER[:idx+1]
+    articles = []
+    for t in reversed(allowed):
+        articles.extend((t, a) for a in rbac_map.get(t, []))
+    return articles
 
 def generate_html(cards, tier):
     header = f"Membership Gallery ({tier.capitalize()} Subscriber)"
@@ -75,8 +81,8 @@ h1 {{ font-size:2rem; margin-bottom:1rem; }}
 .card:hover {{ transform:scale(1.02); }}
 .thumb {{ width:100%; height:160px; object-fit:cover; }}
 .content {{ padding:1rem; }}
-.tier {{ font-size:.75rem; padding:.25rem .5rem; border-radius:4px; color:white; display:inline-block; margin-bottom:.5rem; }}
-.tier.free {{ background:#10b981 }} .tier.trial {{ background:#3b82f6 }} .tier.silver {{ background:#a1a1aa }} .tier.gold {{ background:#f59e0b }}
+.tier {{ font-size:.75rem; padding:.25rem .5rem; border-radius:4px; [Ocolor:white; display:inline-block; margin-bottom:.5rem; }}
+.tier.free {{ background:#10b981 }} .tier.trial {{ background:#3b82f6 }} .tier.silver {{ background:#a1a1aa }} .tier.gold {{ background:#f59e0b }} .tier.main {{ background:#facc15 }}
 h2 {{ margin:0; font-size:1.1rem }} p {{ font-size:.9rem; color:#555 }}
 </style></head><body><h1>{header}</h1><div class="gallery">
 {''.join(cards)}</div></body></html>
@@ -88,10 +94,10 @@ def main():
     cards = [generate_card_html(t, art) for t, art in get_articles_for_tier(rbac_map, tier)]
     html = generate_html(cards, tier)
     os.makedirs(os.path.dirname(OUTPUT_HTML), exist_ok=True)
-    with open(OUTPUT_HTML, "w") as f: f.write(html)
+    with open(OUTPUT_HTML, "w") as f:
+        f.write(html)
     print(f"✅ Gallery updated for {tier}: {len(cards)} tiles")
 
 if __name__ == "__main__":
     main()
-
 

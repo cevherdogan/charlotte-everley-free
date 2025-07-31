@@ -11,7 +11,9 @@ def scan_articles():
     for root, _, files in os.walk(ARTICLE_DIR):
         for f in files:
             if f.lower().endswith(".html"):
-                htmls.append(f)
+                rel_path = os.path.relpath(os.path.join(root, f), ARTICLE_DIR)
+                key = rel_path.replace("\\", "/")
+                htmls.append(key)
     return sorted(set(htmls))
 
 def load_map():
