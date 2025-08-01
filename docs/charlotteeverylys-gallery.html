@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Charlotte Everley’s Visual Gallery</title>
+  <style>
+    body {
+      font-family: 'Georgia', serif;
+      margin: 2rem auto;
+      max-width: 1200px;
+      background: #fdfdfd;
+      color: #333;
+      padding: 1rem;
+    }
+    h1 {
+      text-align: center;
+      font-size: 2.5rem;
+      margin-bottom: 2rem;
+      color: #2c3e50;
+    }
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.5rem;
+    }
+    .gallery-item {
+      position: relative;
+      overflow: hidden;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+    }
+    .gallery-item:hover {
+      transform: scale(1.03);
+      z-index: 2;
+    }
+    .gallery-item img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 12px;
+    }
+    .caption {
+      text-align: center;
+      font-size: 0.9rem;
+      color: #555;
+      margin-top: 0.5rem;
+    }
+  </style>
+</head>
+<body>
+  <h1>Charlotte Everley’s Visual Gallery</h1>
+  <div class="gallery">
+    <div class="gallery-item">
+      <img src="/assets/devon-home-infographic.png" alt="Devon Home Infographic" />
+      <div class="caption">Devon Home Infographic</div>
+    </div>
+    <div class="gallery-item">
+      <img src="/assets/charlotte-everley-articles.png" alt="Articles Catalog Cover" />
+      <div class="caption">Articles Catalog</div>
+    </div>
+    <div class="gallery-item">
+      <img src="/assets/berwyn-og.jpg" alt="Berwyn OG" />
+      <div class="caption">Berwyn OG</div>
+    </div>
+    <div class="gallery-item">
+      <img src="/assets/devon-og.jpg" alt="Devon OG" />
+      <div class="caption">Devon OG</div>
+    </div>
+    <div class="gallery-item">
+      <img src="/assets/about-poster.png" alt="About Poster" />
+      <div class="caption">About Poster</div>
+    </div>
+    <div class="gallery-item">
+      <img src="/assets/cultural-map.svg" alt="Cultural Map" />
+      <div class="caption">Cultural Map</div>
+    </div>
+    <div class="gallery-item">
+      <img src="/assets/devon-culture-schools.png" alt="Devon Schools and Culture" />
+      <div class="caption">Devon Schools</div>
+    </div>
+    <div class="gallery-item">
+      <img src="/assets/key-considerations.png" alt="Key Considerations" />
+      <div class="caption">Key Considerations</div>
+    </div>
+    <div class="gallery-item">
+      <img src="/assets/mainline-demographics.png" alt="Main Line Demographics" />
+      <div class="caption">Demographics</div>
+    </div>
+    <div class="gallery-item">
+      <img src="/assets/valleyforge-memorial-gardens.png" alt="Valley Forge Gardens" />
+      <div class="caption">VFP Gardens</div>
+    </div>
+    <div class="gallery-item">
+      <img src="/assets/AWalkthroughDevonshire-2.png" alt="Devonshire Walkthrough" />
+      <div class="caption">Devonshire Walkthrough</div>
+    </div>
+    <div class="gallery-item">
+      <img src="/assets/TheAllureOfTheMainLine.png" alt="Allure of Main Line" />
+      <div class="caption">Main Line Allure</div>
+    </div>
+    <!-- More entries can be added similarly -->
+  </div>
+</body>
+</html>
