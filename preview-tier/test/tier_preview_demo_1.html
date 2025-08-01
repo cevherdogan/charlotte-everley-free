@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Tier Preview Test</title>
+  <script src="../auth/simulate_user_tier.js"></script>
+  <style>
+    body {
+      font-family: sans-serif;
+      margin: 2rem;
+    }
+  </style>
+</head>
+<body>
+  <h1>🔐 Tier Switcher Demo</h1>
+
+  <!-- Inject test UI -->
+  <div id="tier-switcher-ui">
+    <!-- This will be replaced by tier_switcher.html content -->
+  </div>
+
+  <p>
+    Current tier: <strong id="current-tier-display">...</strong>
+  </p>
+  <p>
+    <a href="#" onclick="localStorage.removeItem('user_tier'); location.reload();">🔄 Reset Tier</a>
+  </p>
+
+  <script>
+    // Load tier_switcher.html dynamically
+    fetch('tier_switcher.html')
+      .then(res => res.text())
+      .then(html => {
+        document.getElementById('tier-switcher-ui').innerHTML = html;
+        // Update display
+        const current = localStorage.getItem('user_tier') || 'unset';
+        document.getElementById('current-tier-display').innerText = current;
+      });
+  </script>
+</body>
+</html>
+

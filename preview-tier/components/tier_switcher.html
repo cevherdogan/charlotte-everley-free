@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Switch User Tier</title>
+</head>
+<body>
+  <h2>Choose Membership Tier</h2>
+  <select id="tierSelector">
+    <option value="free">Free</option>
+    <option value="trial">Trial</option>
+    <option value="silver">Silver</option>
+    <option value="gold">Gold</option>
+  </select>
+  <button onclick="setTier()">Switch Tier</button>
+
+  <script>
+    function setTier() {
+      const selected = document.getElementById("tierSelector").value;
+      localStorage.setItem("userTier", selected);
+      alert("Tier set to " + selected + ". Refresh the homepage to see effect.");
+    }
+  </script>
+</body>
+</html>
+
