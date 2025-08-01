@@ -2,6 +2,13 @@
 
 # Charlotte Everley – Main Line Living
 
+### v1.4.2-debug-tier-switcher
+
+- ✅ Added standalone `debug-tier-switcher.html` for simulating tier access
+- 🔍 Supports set/view/reset of `localStorage.tier`
+- 🚀 Allows testing redirects to `/membership/{tier}/` from localhost or GHP
+
+
 ## [v1.4.1-redirect-free] – 2025-08-01
 🔁 Root-level redirect added: `index.html` now automatically routes to `/membership/free/`.
 
