@@ -3,6 +3,9 @@
 Public landing site for Charlotte Everley – Main Line Home & Lifestyle Curator.  
 Live at: https://cevherdogan.github.io/charlotte-everley-free/
 
+### 🔁 Default Landing Page Behavior
+The root path (`/`) on GitHub Pages now **automatically redirects to `/membership/free/`**, ensuring proper tier handling without 404 errors.
+
 ## 📘 Empowered Seller Membership Model
 
 - Supporting Sellers & Seller’s Agents Alike

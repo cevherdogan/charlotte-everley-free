@@ -2,6 +2,12 @@
 
 # Charlotte Everley – Main Line Living
 
+## [v1.4.1-redirect-free] – 2025-08-01
+🔁 Root-level redirect added: `index.html` now automatically routes to `/membership/free/`.
+
+This ensures GitHub Pages default landing works correctly for visitors and avoids broken links for unauthenticated or trial users.
+
+
 ## v1.2.0 — Thumbnail Tiles & Metadata-Enriched Gallery 🎨
 
 ### 🖼 Improvements
