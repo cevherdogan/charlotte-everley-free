@@ -1,0 +1,26 @@
+v0.2.0          🚀 CN: Charlotte Everley Free | RL: Adds Welcome Pages & CNAME | VERSION: v0.2.0
+v0.2.2          🧪 Add trial welcome page and Stripe trial support [RL: v0.2.2] [CN: CE Trial Flow]
+v0.3.0          📦 Update README with Stripe links for all plans [CN: Subscription Flow Complete] [RL: v0.3.0]
+v0.3.5          🚀 RN: Unified plan cards with hover + full clickable Stripe CTA
+    CL:
+    - Replaced legacy Bronze/Silver/Premier blocks
+    - Applied Tailwind-based hover and border transitions
+    - Stripe links now wrap entire card
+    - Bronze (🟤), Silver (🥈), Premier (💎) styles visually aligned
+    Version: v0.3.5
+v0.4.0          Major structural release: FSBO integration, infographic content, SEO prep
+devon-style-guide-v1 Add Devon style guide and articles
+    
+    - Added STYLE_GUIDE_387DEVONSHIRE.html as HTML template for Main Line storytelling
+    - Created 'camp-jarvis-gem.html' as the first Devon article using the new style
+    - Added 'quiet-roots-wide-reach.html' — community depth piece
+    - Added 'te-education-quiet-power.html' — highlights T/E school district influence
+    - Updated index.md to include new articles
+    - Added new image assets supporting articles (Devonshire, Valley Forge, cultural map)
+v1.0-launch-charlotteeverley 🌿 Site structure finalized: stories index, tiered articles, Charlotte's voice, and full layout
+v1.1.0          Release v1.1.0 — RBAC Gallery Engine
+v1.2.0          🎉 v1.2.0 — RBAC-aware Gallery Tiles with metadata + thumbnails
+v0.9.0-gallery-links Tagging working link-resolved membership gallery (v0.9.0)
+gallery-working-defaults 🎉 Working clickable gallery with valid default thumbnails and resolved links
+v1.3.0          🎉 v1.3.0 – Fully Functional Gallery with Tier Color Coding, Clickable Articles, and Thumbnail Sync
+v0.3-style-guides Version 0.3: Added structured style guides, GPT generation scaffolds, and duplicate detection tools
