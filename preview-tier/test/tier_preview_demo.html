@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Tier Preview Demo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+<body>
+  <h1>Tier Switcher Preview</h1>
+  <div id="preview"></div>
+
+  <script>
+    fetch('../components/tier_switcher.html')
+      .then(res => res.text())
+      .then(html => {
+        document.getElementById('preview').innerHTML = html;
+      });
+  </script>
+</body>
+</html>
+
+

@@ -1,16 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="refresh" content="0; url=membership/free/" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Redirecting to Free Tier</title>
-    <script>
-      window.location.href = "membership/free/";
-    </script>
-  </head>
-  <body>
-    <p>If you are not redirected, <a href="membership/free/">click here</a>.</p>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <title>Redirecting...</title>
+  <meta http-equiv="refresh" content="0; url=membership/free/" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Optional: Inline redirect fallback -->
+  <script>
+    window.location.href = "membership/free/";
+  </script>
+
+  <!-- 🧪 Preview UI loader (only appears if redirect is paused or fails) -->
+  <style>
+    #tier-preview-ui {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      z-index: 1000;
+      background: #f8f8f8;
+      padding: 0.5rem;
+      border-radius: 4px;
+      font-family: sans-serif;
+      font-size: 0.9rem;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    }
+  </style>
+</head>
+<body>
+  <p>If you are not redirected, <a href="membership/free/">click here</a>.</p>
+  <div id="tier-preview-ui"></div>
+
+  <script>
+    fetch('preview-tier/components/tier_switcher.html')
+      .then(res => res.text())
+      .then(html => {
+        document.getElementById('tier-preview-ui').innerHTML = html;
+      });
+  </script>
+</body>
 </html>
 
