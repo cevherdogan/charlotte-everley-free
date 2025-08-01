@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>🔧 Tier Switcher Debug</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: sans-serif;
+      padding: 2rem;
+      background: #f9f9f9;
+    }
+    #tier-box {
+      background: #fff;
+      border: 1px solid #ccc;
+      padding: 1.5rem;
+      border-radius: 8px;
+      max-width: 400px;
+      margin: 2rem auto;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    }
+    select, button {
+      padding: 0.4rem 0.6rem;
+      margin-top: 1rem;
+      width: 100%;
+      font-size: 1rem;
+    }
+    .status {
+      margin-top: 1rem;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="tier-box">
+    <h2>🔧 Membership Tier Tester</h2>
+    <p>Current tier: <span id="current-tier">not set</span></p>
+
+    <label for="tier">Switch Tier:</label>
+    <select id="tier">
+      <option value="">— Select Tier —</option>
+      <option value="free">Free</option>
+      <option value="trial">Trial</option>
+      <option value="silver">Silver</option>
+      <option value="gold">Gold</option>
+    </select>
+
+    <button onclick="setTier()">Set Tier</button>
+    <button onclick="goToTier()">Go to Tier Homepage</button>
+    <button onclick="clearTier()">Clear Tier</button>
+
+    <p class="status" id="status-msg"></p>
+  </div>
+
+  <script>
+    const currentTierEl = document.getElementById("current-tier");
+    const statusMsg = document.getElementById("status-msg");
+
+    function updateTierDisplay() {
+      const tier = localStorage.getItem("tier");
+      currentTierEl.textContent = tier ? tier : "not set";
+    }
+
+    function setTier() {
+      const selected = document.getElementById("tier").value;
+      if (selected) {
+        localStorage.setItem("tier", selected);
+        updateTierDisplay();
+        statusMsg.textContent = `✅ Tier set to "${selected}"`;
+      } else {
+        statusMsg.textContent = `⚠️ Please select a tier first.`;
+      }
+    }
+
+    function goToTier() {
+      const tier = localStorage.getItem("tier");
+      if (tier) {
+        window.location.href = `/membership/${tier}/`;
+      } else {
+        statusMsg.textContent = `⚠️ No tier set — cannot redirect.`;
+      }
+    }
+
+    function clearTier() {
+      localStorage.removeItem("tier");
+      updateTierDisplay();
+      statusMsg.textContent = `✅ Tier cleared.`;
+    }
+
+    // Init on load
+    updateTierDisplay();
+  </script>
+
+</body>
+</html>
+

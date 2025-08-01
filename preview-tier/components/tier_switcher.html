@@ -1,26 +1,26 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Switch User Tier</title>
-</head>
-<body>
-  <h2>Choose Membership Tier</h2>
-  <select id="tierSelector">
+<div style="padding: 1rem; border: 1px dashed gray; margin-bottom: 1rem;">
+  <label for="tierSelect">👤 Simulate Tier: </label>
+  <select id="tierSelect" onchange="setTier(this.value)">
     <option value="free">Free</option>
-    <option value="trial">Trial</option>
     <option value="silver">Silver</option>
     <option value="gold">Gold</option>
+    <option value="trial">Trial</option>
   </select>
-  <button onclick="setTier()">Switch Tier</button>
+  <button onclick="resetTier()">Reset</button>
+</div>
 
-  <script>
-    function setTier() {
-      const selected = document.getElementById("tierSelector").value;
-      localStorage.setItem("userTier", selected);
-      alert("Tier set to " + selected + ". Refresh the homepage to see effect.");
-    }
-  </script>
-</body>
-</html>
+<script>
+  function setTier(tier) {
+    localStorage.setItem("tier", tier);
+    alert("Tier set to " + tier + ". Reloading...");
+    location.reload();
+  }
+
+  function resetTier() {
+    localStorage.removeItem("tier");
+    alert("Tier reset. Reloading...");
+    location.reload();
+  }
+</script>
+
 

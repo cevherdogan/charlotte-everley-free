@@ -3,15 +3,18 @@
 <head>
   <meta charset="UTF-8" />
   <title>Redirecting...</title>
-  <meta http-equiv="refresh" content="0; url=membership/free/" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <!-- Optional: Inline redirect fallback -->
   <script>
-    window.location.href = "membership/free/";
+    // Delay redirect until JS runs
+    const tier = localStorage.getItem("tier") || "free";
+    window.location.href = "membership/" + tier + "/";
   </script>
 
-  <!-- 🧪 Preview UI loader (only appears if redirect is paused or fails) -->
+  <!-- Optional fallback for JS-disabled browsers -->
+  <noscript>
+    <meta http-equiv="refresh" content="0; url=membership/free/" />
+  </noscript>
+
   <style>
     #tier-preview-ui {
       position: absolute;
@@ -26,6 +29,8 @@
       box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
     }
   </style>
+
+
 </head>
 <body>
   <p>If you are not redirected, <a href="membership/free/">click here</a>.</p>
@@ -40,4 +45,5 @@
   </script>
 </body>
 </html>
+
 
