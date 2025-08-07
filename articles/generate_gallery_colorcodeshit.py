@@ -68,9 +68,9 @@ def generate_html(cards, tier):
             color: #000;
         }}
         .label.free {{ background: #defce7; color: #046c4e; }}
-        .label.trial {{ background: #e0f0ff; color: #1d4ed8; }}
+        .label.bronze {{ background: #e0f0ff; color: #1d4ed8; }}
         .label.silver {{ background: #f0f0f0; color: #555; }}
-        .label.gold {{ background: #fff4c2; color: #a15c00; }}
+        .label.premier {{ background: #fff4c2; color: #a15c00; }}
         .caption {{ font-size: 14px; font-weight: 600; padding: 10px; }}
     </style>
 </head>

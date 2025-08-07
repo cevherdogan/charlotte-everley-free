@@ -83,9 +83,9 @@ def main():
                 display: inline-block; border-radius: 4px; margin: 6px;
             }}
             .label.free {{ background: #10b981; color: white; }}
-            .label.trial {{ background: #3b82f6; color: white; }}
+            .label.bronze {{ background: #3b82f6; color: white; }}
             .label.silver {{ background: #6b7280; color: white; }}
-            .label.gold {{ background: #f59e0b; color: white; }}
+            .label.premier {{ background: #f59e0b; color: white; }}
             .label.featured {{ background: #8b5cf6; color: white; }}
             .caption {{ font-size: 14px; font-weight: 600; padding: 10px; }}
         </style>

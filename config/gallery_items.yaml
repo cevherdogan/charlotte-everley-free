@@ -1,0 +1,36 @@
+
+- title: Estates Alongside the Creek
+  slug: estates-alongside-the-creek
+  image: /assets/creek.jpg
+  description: Discover historic estates hidden along Devon's peaceful creekside.
+  abstract: Heritage meets nature in this curated walk.
+  tags: [creek, nature]
+  tier: silver
+  type: article
+  upgrade_hint: "Available with Silver Plan"
+  cta: "Read More"
+  plan_badge: true
+
+- title: The Hidden Stream of Devon
+  slug: The-Hidden-Stream-of-Devon_trial
+  image: /assets/trialstream.jpg
+  description: Explore a quiet stream behind Contention Lane.
+  abstract: This bronze sample reveals local secrets.
+  tags: [stream, bronze]
+  tier: bronze
+  type: sample
+  upgrade_hint: "Upgrade to Bronze"
+  cta: "Read Sample"
+  plan_badge: true
+
+- title: Through Still Waters – Devon Tributary Story
+  slug: Through-Still-Waters-DevonTributaryStory
+  image: /assets/stillwaters.jpg
+  description: An immersive story tracing water's path through Devon.
+  abstract: Featured in Silver and Premier tiers.
+  tags: [devon, water]
+  tier: premier
+  type: feature
+  upgrade_hint: "Premier members only"
+  cta: "Unlock Now"
+  plan_badge: true

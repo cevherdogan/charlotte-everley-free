@@ -70,9 +70,9 @@ def generate_html(tiles, current_branch_tier):
             display: inline-block; border-radius: 4px; margin: 6px;
         }}
         .label.free {{ background: #10b981; color: white; }}
-        .label.trial {{ background: #3b82f6; color: white; }}
+        .label.bronze {{ background: #3b82f6; color: white; }}
         .label.silver {{ background: #a1a1aa; color: white; }}
-        .label.gold {{ background: #f59e0b; color: white; }}
+        .label.premier {{ background: #f59e0b; color: white; }}
         .label.main {{ background: #ef4444; color: white; }}
         .caption {{ font-size: 14px; font-weight: 600; padding: 10px; }}
     </style>

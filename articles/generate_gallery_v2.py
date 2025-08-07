@@ -101,9 +101,9 @@ h2 {{ margin:0; font-size:1.1rem }} p {{ font-size:.9rem; color:#555 }}
         color: white;
     }
     .label.free   { background-color: #10b981; } /* Emerald */
-    .label.trial  { background-color: #3b82f6; } /* Blue */
+    .label.bronze  { background-color: #3b82f6; } /* Blue */
     .label.silver { background-color: #a1a1aa; } /* Gray */
-    .label.gold   { background-color: #f59e0b; } /* Amber */
+    .label.premier   { background-color: #f59e0b; } /* Amber */
     .label.main   { background-color: #f43f5e; } /* Rose */
     .caption { font-size: 14px; font-weight: 600; padding: 10px; }
 </style>
