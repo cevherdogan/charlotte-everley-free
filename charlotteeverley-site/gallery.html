@@ -4,6 +4,9 @@
   <title>Membership Gallery – Premier</title>
   <style>
     body { font-family: sans-serif; padding: 20px; }
+    .toolbar { margin: 0 0 16px 0; display: flex; gap: 12px; align-items: center; }
+    .tier-select { padding: 6px 8px; }
+    .hint { color: #6b7280; }
     .tiles { display: flex; flex-wrap: wrap; gap: 20px; }
     .card { width: 240px; text-decoration: none; color: black; border: 1px solid #ccc; border-radius: 6px; overflow: hidden; box-shadow: 1px 2px 4px rgba(0,0,0,0.1); }
     .card img { width: 100%; height: 150px; object-fit: cover; }
@@ -17,6 +20,17 @@
 </head>
 <body>
   <h1>Membership Gallery – Premier</h1>
+  <div class="toolbar">
+  <label for="tierSelect">Test as tier:</label>
+  <select id="tierSelect" class="tier-select">
+    <option value="all">All (no filter)</option>
+<option value="free">Free</option>
+<option value="bronze">Bronze</option>
+<option value="silver">Silver</option>
+<option value="premier" selected="selected">Premier</option>
+  </select>
+  <small class="hint">Tip: use <code>?tier=silver</code> in the URL to preset</small>
+</div>
   <div class="tiles">
 <a class="card" href="/membership/gold/articles/Jug-Hallow-Rd-and-ValleyForge-Splender-4-seo.html" data-tier="premier">
   <img alt="Jug Hallow Rd And Valleyforge Splender 4 Seo" src="/assets/default.png"/>
@@ -89,5 +103,38 @@
   <div class="caption">Te Bus Routes 4</div>
 </a>
   </div>
+  
+<script>
+(function() {
+  const TIERS = ["free", "bronze", "silver", "premier"];
+  const tierIndex = Object.fromEntries(TIERS.map((t, i) => [t, i]));
+
+  function includesLower(selected, required) {
+    if (selected === "all") return true;
+    return (tierIndex[selected] >= tierIndex[required]);
+  }
+
+  function getQueryTier() {
+    const p = new URLSearchParams(window.location.search);
+    const q = (p.get("tier") || "").toLowerCase();
+    return TIERS.includes(q) ? q : null;
+  }
+
+  function applyFilter(selected) {
+    document.querySelectorAll(".card").forEach(tile => {
+      const required = tile.dataset.tier;
+      tile.style.display = includesLower(selected, required) ? "" : "none";
+    });
+  }
+
+  const select = document.getElementById("tierSelect");
+  const preset = getQueryTier();
+  if (preset) select.value = preset;
+
+  applyFilter(select.value);
+  select.addEventListener("change", () => applyFilter(select.value));
+})();
+</script>
+
 </body>
 </html>

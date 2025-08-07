@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 import os
 import json
+import urllib.parse
 
 # ---- Config ----
 RBAC   = "rbac-map.json"                         # { "free": [...], "bronze": [...], "silver": [...], "premier": [...] }
@@ -20,8 +21,7 @@ def branch_to_tier() -> str:
     for t in TIERS:
         if t in b:
             return t
-    # Default to highest (so release branches generate full access)
-    return TIERS[-1]
+    return TIERS[-1]  # default highest
 
 def load_json(path: str, default):
     return json.load(open(path, "r", encoding="utf-8")) if os.path.exists(path) else default
@@ -38,36 +38,30 @@ def get_articles(rbac_path: str, current_tier: str):
     allowed = TIERS[: idx + 1]  # inheritance
 
     items = []
-    # Show current tier first, then lower ones
-    for t in reversed(allowed):
+    for t in reversed(allowed):            # show current tier first
         for fname in rbac.get(t, []):
-            # Title derived from filename (you can wire real metadata later)
             title = os.path.splitext(os.path.basename(fname))[0].replace("-", " ").title()
             items.append((fname, title, t))
     return items
 
 def resolve_link(filename: str) -> str:
     """
-    Prefer a membership article if it exists (membership/<tier>/articles/<file>),
-    otherwise fall back to /articles/** search.
+    Prefer membership/<tier>/articles/<file>, else fall back to /articles/**.
     Returns a site-root-relative URL.
     """
-    # Search in membership/*/articles
     membership_root = "membership"
     if os.path.isdir(membership_root):
         for band in os.listdir(membership_root):
             candidate = os.path.join(membership_root, band, "articles", filename)
             if os.path.exists(candidate):
                 return "/" + candidate.replace("\\", "/")
-    # Fallback: search articles/
     for root, _, files in os.walk("articles"):
         if filename in files:
             return "/" + os.path.join(root, filename).replace("\\", "/")
-    # Last resort: best-guess under /articles
     return "/articles/" + filename
 
 def build_tile_html(filename: str, title: str, tier: str) -> str:
-    thumb = "/assets/default.png"  # plug in a real thumb map later if desired
+    thumb = "/assets/default.png"
     return f"""
 <a class="card" href="{resolve_link(filename)}" data-tier="{tier}">
   <img alt="{title}" src="{thumb}"/>
@@ -75,13 +69,71 @@ def build_tile_html(filename: str, title: str, tier: str) -> str:
   <div class="caption">{title}</div>
 </a>""".strip()
 
-def generate_html(cards_html: str, tier: str) -> str:
+def _options_html(selected: str) -> str:
+    opts = []
+    for t in ["all"] + TIERS:
+        label = "All (no filter)" if t == "all" else t.title()
+        sel = ' selected="selected"' if t == selected else ""
+        opts.append(f'<option value="{t}"{sel}>{label}</option>')
+    return "\n".join(opts)
+
+def generate_html(cards_html: str, current_tier: str) -> str:
+    # Build the selector pre-filled to current tier (can be overridden by ?tier=... at runtime)
+    selector_html = f"""
+<div class="toolbar">
+  <label for="tierSelect">Test as tier:</label>
+  <select id="tierSelect" class="tier-select">
+    {_options_html(current_tier)}
+  </select>
+  <small class="hint">Tip: use <code>?tier=silver</code> in the URL to preset</small>
+</div>
+""".strip()
+
+    # Tiny JS tester: lets you switch tiers in the browser and applies inheritance visually.
+    # This does NOT change the source-of-truth; it’s only for verification.
+    js = f"""
+<script>
+(function() {{
+  const TIERS = {json.dumps(TIERS)};
+  const tierIndex = Object.fromEntries(TIERS.map((t, i) => [t, i]));
+
+  function includesLower(selected, required) {{
+    if (selected === "all") return true;
+    return (tierIndex[selected] >= tierIndex[required]);
+  }}
+
+  function getQueryTier() {{
+    const p = new URLSearchParams(window.location.search);
+    const q = (p.get("tier") || "").toLowerCase();
+    return TIERS.includes(q) ? q : null;
+  }}
+
+  function applyFilter(selected) {{
+    document.querySelectorAll(".card").forEach(tile => {{
+      const required = tile.dataset.tier;
+      tile.style.display = includesLower(selected, required) ? "" : "none";
+    }});
+  }}
+
+  const select = document.getElementById("tierSelect");
+  const preset = getQueryTier();
+  if (preset) select.value = preset;
+
+  applyFilter(select.value);
+  select.addEventListener("change", () => applyFilter(select.value));
+}})();
+</script>
+"""
+
     return f"""<html>
 <head>
   <meta charset="utf-8"/>
-  <title>Membership Gallery – {tier.title()}</title>
+  <title>Membership Gallery – {current_tier.title()}</title>
   <style>
     body {{ font-family: sans-serif; padding: 20px; }}
+    .toolbar {{ margin: 0 0 16px 0; display: flex; gap: 12px; align-items: center; }}
+    .tier-select {{ padding: 6px 8px; }}
+    .hint {{ color: #6b7280; }}
     .tiles {{ display: flex; flex-wrap: wrap; gap: 20px; }}
     .card {{ width: 240px; text-decoration: none; color: black; border: 1px solid #ccc; border-radius: 6px; overflow: hidden; box-shadow: 1px 2px 4px rgba(0,0,0,0.1); }}
     .card img {{ width: 100%; height: 150px; object-fit: cover; }}
@@ -94,10 +146,12 @@ def generate_html(cards_html: str, tier: str) -> str:
   </style>
 </head>
 <body>
-  <h1>Membership Gallery – {tier.title()}</h1>
+  <h1>Membership Gallery – {current_tier.title()}</h1>
+  {selector_html}
   <div class="tiles">
 {cards_html}
   </div>
+  {js}
 </body>
 </html>"""
 
