@@ -1,0 +1,16 @@
+# images (treat strictly as binary)
+*.png  binary
+*.jpg  binary
+*.jpeg binary
+*.webp binary
+*.gif  binary
+
+# vectors: keep text but avoid EOL normalization noise
+*.svg -text
+
+# fonts & docs
+*.ttf  binary
+*.otf  binary
+*.woff binary
+*.woff2 binary
+*.pdf  binary
