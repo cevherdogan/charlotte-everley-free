@@ -1,0 +1,53 @@
+import { Card, CardContent } from "@/components/ui/card";
+import { MapPin, Coffee, Home, TreeDeciduous, Bike } from "lucide-react";
+
+export default function BerwynCommunityPage() {
+  return (
+    <div className="min-h-screen bg-neutral-50 p-6 md:p-12">
+      <div className="max-w-4xl mx-auto space-y-8">
+        <h1 className="text-4xl font-bold text-center text-emerald-900">Berwyn: Where the Quiet Speaks Volumes</h1>
+        
+        <Card className="bg-white shadow-xl rounded-2xl p-6">
+          <CardContent className="space-y-6 text-neutral-800 text-lg leading-relaxed">
+            <p className="flex items-center gap-3 text-emerald-800 font-semibold">
+              <MapPin className="w-5 h-5" /> Nestled between Devon and Paoli
+            </p>
+            <p>
+              Berwyn holds its own kind of magic — the quiet, confident charm of a town that doesn’t need to prove itself. Here, mornings begin with the aroma of fresh bread from Clay's Bakery or a strong pour from Filter Coffee, where neighbors greet one another by name.
+            </p>
+
+            <p className="flex items-center gap-3 text-emerald-800 font-semibold">
+              <Coffee className="w-5 h-5" /> Small-Town Connections
+            </p>
+            <p>
+              Along Lancaster Avenue, life moves at a pace that leaves room for conversation — about schools, soccer practice, or the latest art show at Main Line Art Center.
+            </p>
+
+            <p className="flex items-center gap-3 text-emerald-800 font-semibold">
+              <Home className="w-5 h-5" /> Heartfelt Living
+            </p>
+            <p>
+              From lovingly maintained Cape Cods to thoughtful new builds, Berwyn offers homes with generous yards and real front porches. It’s a place where charm isn’t curated — it’s lived in.
+            </p>
+
+            <p className="flex items-center gap-3 text-emerald-800 font-semibold">
+              <TreeDeciduous className="w-5 h-5" /> Natural Calm
+            </p>
+            <p>
+              Jenkins Arboretum and the Chester Valley Trail offer a rhythm of bloom and stillness — perfect for walkers, runners, and stroller-pushers seeking tree-lined serenity.
+            </p>
+
+            <p className="flex items-center gap-3 text-emerald-800 font-semibold">
+              <Bike className="w-5 h-5" /> A Community That Moves Together
+            </p>
+            <p>
+              Whether cheering at Footlighters Theater or supporting local spots like Handel’s, Berwyn is a town that shows up — for the arts, for its schools, and for each other.
+            </p>
+          </CardContent>
+        </Card>
+      </div>
+    </div>
+  );
+}
+
+

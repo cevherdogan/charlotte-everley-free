@@ -1,0 +1,92 @@
+import os, json, shutil
+
+RBAC = "rbac-map.json"
+THUMB_MAP = "thumbnail-map.json"
+META = "article-metadata.json"
+OUTPUT = "charlotteeverley-site/gallery.html"
+ASSET_DIR = "assets"
+OUT_ASSET_DIR = "charlotteeverley-site/assets"
+TIERS = ["free","trial","silver","gold"]
+
+def branch_to_tier():
+    b = os.popen("git rev-parse --abbrev-ref HEAD").read().strip()
+    return next((t for t in TIERS if t in b), None) or "gold"
+
+def scan_mapping():
+    m = json.load(open(THUMB_MAP))
+    return {k: m[k] for k in m}
+
+def load_meta(): return json.load(open(META)) if os.path.exists(META) else {}
+
+def get_articles(rbac, tier):
+    m = json.load(open(rbac))
+    idx = TIERS.index(tier)
+    allowed = TIERS[:idx+1]
+    arts = []
+    for t in reversed(allowed):
+        for a in m.get(t, []):
+            arts.append((t, a))
+    return arts
+
+def resolve_link(filename):
+    # look in membership/<tier>/articles first
+    path = f"membership/{tier}/articles/{filename}"
+    if os.path.exists(path): return path
+    # fallback to articles folder recursively
+    for root, _, files in os.walk("articles"):
+        if filename in files:
+            return os.path.join(root, filename)
+    return filename
+
+tier = branch_to_tier()
+thumb = scan_mapping(); meta = load_meta()
+arts = get_articles(RBAC, tier)
+
+os.makedirs(OUT_ASSET_DIR, exist_ok=True)
+cards = []
+
+for t,fn in arts:
+    slug = os.path.splitext(fn)[0]
+    src = thumb.get(fn)
+    img_dst = None
+    if src and os.path.exists(src):
+        dst = os.path.join(OUT_ASSET_DIR, os.path.basename(src))
+        shutil.copy(src, dst)
+        img_dst = f"assets/{os.path.basename(src)}"
+    else:
+        img_dst = "assets/default.png"
+    data = meta.get(fn, {})
+    title = data.get("title", slug.replace("-", " ").title())
+    desc = data.get("description", "")
+    link = resolve_link(fn)
+    cards.append((title,desc,img_dst,link,t))
+
+# now assemble HTML
+card_html = ""
+for title,desc,img,link,t in cards:
+    card_html += f'''
+    <a class="card" href="{link}" target="_blank">
+      <img src="{img}" alt="{title}" class="thumb" />
+      <div class="content"><span class="tier {t}">{t.title()}</span>
+        <h2>{title}</h2><p>{desc}</p>
+      </div>
+    </a>'''
+
+html = f"""<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><title>Gallery</title>
+<style>body{{padding:2rem;font-family:sans-serif;background:#f9f9f9}}
+.gallery{{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:1rem}}
+.card{{display:block;text-decoration:none;color:inherit;background:#fff;border-radius:6px;box-shadow:0 2px 8px rgba(0,0,0,.1);overflow:hidden;transition:transform .2s}}
+.card:hover{{transform:scale(1.02)}}
+.thumb{{width:100%;height:140px;object-fit:cover}}
+.content{{padding:8px}}
+.tier{{
+  font-size:.7rem;font-weight:bold;border-radius:3px;padding:2px 4px;color:#fff;display:inline-block;margin-bottom:4px}}
+.tier.free{{background:#10b981}}.tier.trial{{background:#3b82f6}}
+.tier.silver{{background:#a1a1aa}}.tier.gold{{background:#f59e0b}}
+h2{{margin:.5rem 0 .3rem;font-size:1rem}}p{{font-size:.85rem;color:#444;margin:0}}
+</style></head><body><h1>Membership Gallery – {tier.title()}</h1><div class="gallery">{card_html}</div></body></html>"""
+
+os.makedirs(os.path.dirname(OUTPUT), exist_ok=True)
+with open(OUTPUT, "w") as f: f.write(html)
+print(f"✅ Gallery built for tier '{tier}', {len(cards)} cards.")
+
